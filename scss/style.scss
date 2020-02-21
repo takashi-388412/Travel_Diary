@@ -53,7 +53,16 @@ $breakpoints: (
 // ==================================
 // base
 // ==================================
-
+html {
+  font-size: 62.5%;
+}
+body {
+  // font-family: ;
+  font-size: 1.4rem;
+}
+*,*::before,*::after {
+  box-sizing: border-box;
+}
 // ==================================
 // parts
 // ==================================
@@ -73,7 +82,42 @@ $breakpoints: (
 // ==================================
 // TRABEL DIARY
 // ==================================
+.diary {
 
+  &-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include mq() {
+      flex-direction: column;
+      justify-content: initial;
+    }
+  }
+  &-box {
+    position: relative;
+    width: 30%;
+    @include mq() {
+      width: 100%;
+    }
+  }
+  &-image {
+    width: 100%;
+    height: 70%;
+  }
+  &-country {
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+  }
+  &-date {
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    right: 0;
+  }
+}
 // ==================================
 // CONTACT 
 // ==================================
