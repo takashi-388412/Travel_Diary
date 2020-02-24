@@ -89,15 +89,26 @@ a, a:visited {
   background-color: lightgray;
 }
 
+.about-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .about-wrapper {
+    display: block;
+    writing-mode: horizontal-tb;
+  }
+}
+
 .about-text {
   writing-mode: vertical-rl;
-  display: inline-block;
-  float: right;
+  letter-spacing: 5px;
 }
 
 @media screen and (max-width: 768px) {
   .about-text {
-    float: initial;
     writing-mode: horizontal-tb;
   }
 }

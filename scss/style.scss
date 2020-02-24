@@ -146,15 +146,18 @@ a ,a:visited{
     background-color: lightgray;
 
   &-wrapper {
-
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    @include tb() {
+      display: block;
+      writing-mode: horizontal-tb;
+    }
   }
   &-text {
     writing-mode: vertical-rl;
-    // writing-mode: vertical-lr;
-    display: inline-block;
-    float: right;
+    letter-spacing: 5px;
     @include tb() {
-      float: initial;
       writing-mode: horizontal-tb;
     }
   }
