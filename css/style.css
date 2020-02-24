@@ -106,9 +106,14 @@ a, a:visited {
   /*logo と nav を横並びに*/
   top: 0;
   left: 0;
+  z-index: 1;
   width: 100%;
   height: 80px;
   padding: 60px 100px;
+}
+
+.logo a {
+  color: #fff;
 }
 
 .logo a:hover {
@@ -132,12 +137,33 @@ a, a:visited {
 }
 
 .top {
+  overflow: hidden;
+  position: relative;
+  min-width: 960px;
+  height: 465px;
+}
+
+.top::after {
+  content: '';
+  display: block;
   background-image: url("../img/sea.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 500px;
+}
+
+.top-2 {
+  background-image: url("../img/tree.jpg");
+}
+
+.top-3 {
+  background-image: url("../img/ssea.jpg");
+}
+
+.top-4 {
+  background-image: url("../img/sea.jpg");
 }
 
 .about {
