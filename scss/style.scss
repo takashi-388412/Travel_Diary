@@ -57,9 +57,11 @@ html {
   font-size: 62.5%;
 }
 body {
-  // font-family: ;
-  font-size: 1.4rem;
+  font-family: 'Montserrat',sans-serif ;
   color: #000;
+  font-size: 1.4rem;
+  text-align: center;
+  letter-spacing: 2px;
 }
 .container {
   padding: 0 150px 80px;
@@ -85,20 +87,51 @@ a ,a:visited{
 // parts
 // ==================================
 .heading {
-  text-align: center;
-  padding: 80px 0;
-  margin: 0;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 10px;
+  margin: 50px 0;
+  font-size: 3.0rem;
+  letter-spacing: 5px;
+  border-bottom: 1px solid black;
+  @include mq() {
+    padding: 40px 0;
+  }
 }
+.heading::before,
+.heading::after {
+  position: absolute;
+  top: 100%;
+  left:50%;
+  transform:translateX(-50%);
+  content: '';
+  border: 10px solid transparent;
+}
+.heading::before {
+  border-top: 10px solid black;
+}
+.heading::after {
+  margin-top: -1px;
+   border-top: 10px solid white;
+}
+
 .btn {
   display: inline-block;
-  padding: 10px;
+  padding: 15px;
   width: 150px;
   border-radius: 5px;
-  border: 1px solid gray;
-  color: red;
 }
-.btn-more{
-  background-color: skyblue;
+.btn:hover {
+  opacity: 0.8;
+}
+.btn-more::after{
+  content: '\f054';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  padding-left: 10px;
+}
+.btn-more {
+  background-color: #70bdd3;
 }
 // ==================================
 // Header
@@ -131,12 +164,12 @@ a ,a:visited{
     padding: 0 15px;
   }
   &-item a{
-    text-decoration: none;
     color: #fff;
+    transition-duration: 250ms;
   }
   &-item a:hover{
-    color: #fff;
-    opacity: 0.8;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #fff;
   }
 }
 // ==================================
@@ -155,7 +188,7 @@ a ,a:visited{
 // ==================================
 .about {
     // padding: 0 150px 80px;
-    background-color: lightgray;
+    background-color: #F6F6F6;
 
   &-wrapper {
     display: flex;
@@ -169,6 +202,7 @@ a ,a:visited{
   &-text {
     writing-mode: vertical-rl;
     letter-spacing: 5px;
+    text-align: initial;
     @include tb() {
       writing-mode: horizontal-tb;
     }
@@ -237,7 +271,7 @@ a ,a:visited{
 // ==================================
 .contact {
   // padding: 0 150px 80px;
-  background-color: lightgray;
+  background-color: #F6F6F6;
 }
 .contact-form {
 
@@ -245,9 +279,12 @@ a ,a:visited{
 %formBase {
   display: block;
   width: 80%;
+  max-width: 800px;
   margin:0 auto;
   margin-bottom: 15px;
   padding: 10px;
+  outline: none;
+  border-radius: 5px;
 }
 .contact-form input[type=text],
 .contact-form textarea,
@@ -260,19 +297,44 @@ a ,a:visited{
 }
 .contact-form input[type=submit] {
   width: 200px;
-  border-radius: 5px;
 }
 .contact-form input[type=text]:focus,
 .contact-form textarea:focus {
-  background-color: blue;
+  box-shadow: 0 0 10px #70bdd3 inset;
 }
 .contact-form input[type=submit]:hover {
-  background-color: blue;
+  opacity: 0.5;
 }
 // ==================================
 //  scroll
 // ==================================
-
+.back-to-top {
+    background-color: rgb(240, 240, 240);
+    border-width: 0;
+    cursor: pointer;
+    display: block;
+    padding: 16px;
+    margin: 0 auto;
+    border-radius: 50%;
+    outline: none;
+}
+.back-to-top .scroll-button {
+    display: block;
+    height: 18px;
+    margin:auto;
+    overflow: hidden;
+    width: 26px;
+}
+.back-to-top .scroll-button::before {
+    content: url(../img/sprites.png);
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    margin-left: -40px;
+}
+.no-js .back-to-top {
+    display: none;
+}
 // ==================================
 //  Footer
 // ==================================
