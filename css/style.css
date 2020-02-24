@@ -5,6 +5,7 @@ html {
 
 body {
   font-size: 1.4rem;
+  color: #000;
 }
 
 .container {
@@ -39,8 +40,21 @@ a, a:visited {
 
 .heading {
   text-align: center;
-  padding: 50px 0 30px;
+  padding: 80px 0;
   margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px;
+  width: 150px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  color: red;
+}
+
+.btn-more {
+  background-color: skyblue;
 }
 
 .header {
@@ -115,6 +129,7 @@ a, a:visited {
 
 .diary-wrapper {
   width: 100%;
+  margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -129,7 +144,17 @@ a, a:visited {
 
 .diary-box {
   position: relative;
-  width: 23%;
+  width: 22%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.diary-box a {
+  display: block;
+}
+
+.diary-box a:hover {
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 768px) {
@@ -145,22 +170,26 @@ a, a:visited {
 }
 
 .diary-image {
+  display: block;
   width: 100%;
-  height: 70%;
+  height: auto;
 }
 
 .diary-country {
   position: absolute;
-  display: inline-block;
-  bottom: 0;
-  left: 0;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.0rem;
+  color: salmon;
 }
 
-.diary-date {
-  position: absolute;
-  display: inline-block;
-  bottom: 0;
-  right: 0;
+.diary-title {
+  margin: 10px 0px;
+}
+
+.diary-detail {
+  text-align: center;
 }
 
 .contact {
