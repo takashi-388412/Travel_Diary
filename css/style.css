@@ -4,27 +4,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat',sans-serif;
-  color: #000;
   font-size: 1.4rem;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
-.container {
-  padding: 0 150px 80px;
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 0 50px 80px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  .container {
-    padding: 0 30px 80px;
-  }
 }
 
 *, *::before, *::after {
@@ -37,66 +17,9 @@ body {
   clear: both;
 }
 
-a, a:visited {
-  text-decoration: none;
-}
-
 .heading {
-  display: inline-block;
-  position: relative;
-  padding-bottom: 10px;
-  margin: 50px 0;
-  font-size: 3.0rem;
-  letter-spacing: 5px;
-  border-bottom: 1px solid black;
-}
-
-@media screen and (max-width: 414px) {
-  .heading {
-    padding: 40px 0;
-  }
-}
-
-.heading::before,
-.heading::after {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  content: '';
-  border: 10px solid transparent;
-}
-
-.heading::before {
-  border-top: 10px solid #000;
-}
-
-.heading::after {
-  margin-top: -1px;
-  border-top: 10px solid #fff;
-}
-
-.btn {
-  display: inline-block;
-  color: #000;
-  padding: 15px;
-  width: 150px;
-  border-radius: 5px;
-}
-
-.btn:hover {
-  opacity: 0.8;
-}
-
-.btn-more::after {
-  content: '\f054';
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  padding-left: 20px;
-}
-
-.btn-more {
-  background-color: #70bdd3;
+  text-align: center;
+  padding: 20px 0 10px;
 }
 
 .header {
@@ -107,207 +30,59 @@ a, a:visited {
   /*logo と nav を横並びに*/
   top: 0;
   left: 0;
-  z-index: 1;
   width: 100%;
   height: 80px;
-  padding: 60px 100px;
-}
-
-@media screen and (max-width: 768px) {
-  .header {
-    display: block;
-    padding: 0;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .logo {
-    display: none;
-  }
-}
-
-.logo a {
-  color: #fff;
-}
-
-.logo a:hover {
-  opacity: 0.5;
-}
-
-@media screen and (max-width: 768px) {
-  .nav {
-    -webkit-transform: translate(-50%, -50%);
-    background: #fff;
-    display: none;
-    height: auto;
-    left: 50%;
-    position: fixed;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    z-index: 100;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .nav-menu {
-    padding: 0;
-  }
+  padding: 0 24px;
 }
 
 .nav-item {
   display: inline-block;
   /*nav-itemを横並びに*/
-  padding: 0 15px;
-}
-
-@media screen and (max-width: 768px) {
-  .nav-item {
-    display: block;
-    padding: 10px 0px;
-  }
+  padding: 0 12px;
 }
 
 .nav-item a {
-  color: #fff;
-  transition-duration: 250ms;
-}
-
-@media screen and (max-width: 768px) {
-  .nav-item a {
-    display: block;
-    color: #000;
-    transition-duration: initial;
-    border-bottom: 2px solid #000;
-    padding: 10px 0px;
-  }
+  text-decoration: none;
+  color: #000;
 }
 
 .nav-item a:hover {
-  padding-bottom: 10px;
-  border-bottom: 2px solid #fff;
+  color: #fff;
+  opacity: 0.8;
 }
 
-@media screen and (max-width: 768px) {
-  .nav-item a:hover {
-    padding-bottom: 0;
-    border-bottom: 2px solid #000;
-  }
-}
-
-#modal-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  display: none;
-  height: 120%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 99;
-}
-
-.icon-wrapper {
-  text-align: right;
-}
-
-.icon-hamburger {
-  border: 1px solid #ccc;
-  cursor: pointer;
-  height: 50px;
-  position: relative;
-  width: 50px;
-  display: none;
-  margin-bottom: 0.4em;
-  margin: 10px 10px 0px;
-}
-
-@media screen and (max-width: 768px) {
-  .icon-hamburger {
-    display: inline-block;
-  }
-}
-
-.icon-hamburger span {
-  background: #cccccc;
-  display: block;
-  height: 16%;
-  left: 50%;
-  margin: -8% 0 0 -42%;
-  position: absolute;
-  top: 50%;
-  width: 84%;
-}
-
-.icon-hamburger span::before, .icon-hamburger span::after {
-  background: #cccccc;
-  content: "";
-  display: block;
-  height: 100%;
-  left: 50%;
-  top: 50%;
-  right: 0;
-  margin: -8% 0 0 -50%;
-  position: absolute;
-  width: 100%;
-}
-
-.icon-hamburger span::before {
-  margin-top: -38%;
-}
-
-.icon-hamburger span::after {
-  margin-top: 19%;
-}
-
-.bg-switcher {
-  width: 100%;
-  height: 600px;
-  background-position: center center;
+.top {
+  background-image: url("../img/sunset.jpg");
+  background-attachment: fixed;
+  background-position: center;
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.bg {
-  color: white;
-  font-size: 100px;
-  font-weight: bold;
-  text-align: center;
+  background-repeat: no-repeat;
+  height: 700px;
 }
 
 .about {
-  background-color: #F6F6F6;
-}
-
-.about-wrapper {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-}
-
-@media screen and (max-width: 768px) {
-  .about-wrapper {
-    display: block;
-    writing-mode: horizontal-tb;
-  }
+  padding: 0 150px 80px;
 }
 
 .about-text {
   writing-mode: vertical-rl;
-  letter-spacing: 5px;
-  text-align: initial;
+  display: inline-block;
+  float: right;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 414px) {
   .about-text {
+    float: initial;
     writing-mode: horizontal-tb;
   }
 }
 
+.diary {
+  padding: 0 150px 80px;
+}
+
 .diary-wrapper {
   width: 100%;
-  margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -322,23 +97,7 @@ a, a:visited {
 
 .diary-box {
   position: relative;
-  width: 22%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.diary-box a {
-  display: block;
-}
-
-.diary-box a:hover {
-  opacity: 0.8;
-}
-
-@media screen and (max-width: 768px) {
-  .diary-box {
-    width: 45%;
-  }
+  width: 30%;
 }
 
 @media screen and (max-width: 414px) {
@@ -348,92 +107,26 @@ a, a:visited {
 }
 
 .diary-image {
-  display: block;
   width: 100%;
-  height: auto;
+  height: 70%;
 }
 
 .diary-country {
   position: absolute;
-  top: 38%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2.0rem;
-  color: salmon;
+  display: inline-block;
+  bottom: 0;
+  left: 0;
 }
 
-.diary-title {
-  margin: 10px 0px;
-}
-
-.diary-detail {
-  text-align: center;
+.diary-date {
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  right: 0;
 }
 
 .contact {
-  background-color: #F6F6F6;
-}
-
-.contact-form input[type=text],
-.contact-form textarea,
-.contact-form input[type=submit] {
-  display: block;
-  width: 80%;
-  max-width: 800px;
-  margin: 0 auto;
-  margin-bottom: 15px;
-  padding: 10px;
-  outline: none;
-  border-radius: 5px;
-}
-
-.contact-form textarea {
-  height: 200px;
-  margin-bottom: 30px;
-}
-
-.contact-form input[type=submit] {
-  width: 200px;
-}
-
-.contact-form input[type=text]:focus,
-.contact-form textarea:focus {
-  box-shadow: 0 0 10px #70bdd3 inset;
-}
-
-.contact-form input[type=submit]:hover {
-  opacity: 0.5;
-}
-
-.back-to-top {
-  background-color: #f0f0f0;
-  border-width: 0;
-  cursor: pointer;
-  display: block;
-  padding: 16px;
-  margin: 0 auto;
-  border-radius: 50%;
-  outline: none;
-}
-
-.back-to-top .scroll-button {
-  display: block;
-  height: 18px;
-  margin: auto;
-  overflow: hidden;
-  width: 26px;
-}
-
-.back-to-top .scroll-button::before {
-  content: url(../img/sprites.png);
-  display: inline-block;
-  font-size: 0;
-  line-height: 0;
-  margin-left: -40px;
-}
-
-.no-js .back-to-top {
-  display: none;
+  padding: 0 150px 80px;
 }
 
 .footer {
@@ -441,7 +134,6 @@ a, a:visited {
   background-color: lightgray;
   height: 80px;
   line-height: 80px;
-  background-color: gray;
 }
 
 .footer p {
