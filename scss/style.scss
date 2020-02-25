@@ -522,6 +522,10 @@ a ,a:visited{
     border-radius: 50%;
     outline: none;
 }
+.back-to-top:hover {
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.20);
+    transform: translateY(-4px);
+}
 .back-to-top .scroll-button {
     display: block;
     height: 18px;
