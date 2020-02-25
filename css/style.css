@@ -113,6 +113,19 @@ a, a:visited {
   padding: 60px 100px;
 }
 
+@media screen and (max-width: 768px) {
+  .header {
+    display: block;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+}
+
 .logo a {
   color: #fff;
 }
@@ -121,10 +134,38 @@ a, a:visited {
   opacity: 0.5;
 }
 
+@media screen and (max-width: 768px) {
+  .nav {
+    -webkit-transform: translate(-50%, -50%);
+    background: #fff;
+    display: none;
+    height: auto;
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    z-index: 100;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    padding: 0;
+  }
+}
+
 .nav-item {
   display: inline-block;
   /*nav-itemを横並びに*/
   padding: 0 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-item {
+    display: block;
+    padding: 10px 0px;
+  }
 }
 
 .nav-item a {
@@ -132,9 +173,90 @@ a, a:visited {
   transition-duration: 250ms;
 }
 
+@media screen and (max-width: 768px) {
+  .nav-item a {
+    display: block;
+    color: #000;
+    transition-duration: initial;
+    border-bottom: 2px solid #000;
+    padding: 10px 0px;
+  }
+}
+
 .nav-item a:hover {
   padding-bottom: 10px;
   border-bottom: 2px solid #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-item a:hover {
+    padding-bottom: 0;
+    border-bottom: 2px solid #000;
+  }
+}
+
+#modal-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  height: 120%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.icon-wrapper {
+  text-align: right;
+}
+
+.icon-hamburger {
+  border: 1px solid #ccc;
+  cursor: pointer;
+  height: 50px;
+  position: relative;
+  width: 50px;
+  display: none;
+  margin-bottom: 0.4em;
+  margin: 10px 10px 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .icon-hamburger {
+    display: inline-block;
+  }
+}
+
+.icon-hamburger span {
+  background: #cccccc;
+  display: block;
+  height: 16%;
+  left: 50%;
+  margin: -8% 0 0 -42%;
+  position: absolute;
+  top: 50%;
+  width: 84%;
+}
+
+.icon-hamburger span::before, .icon-hamburger span::after {
+  background: #cccccc;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  right: 0;
+  margin: -8% 0 0 -50%;
+  position: absolute;
+  width: 100%;
+}
+
+.icon-hamburger span::before {
+  margin-top: -38%;
+}
+
+.icon-hamburger span::after {
+  margin-top: 19%;
 }
 
 .bg-switcher {

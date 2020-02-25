@@ -125,3 +125,14 @@ $(function () {
         easing: "swing", //エフェクトのイージング "swing" "linear"
     });
 });
+
+jQuery('.icon-hamburger').on('click', function() {
+  jQuery('header').append('<div id="modal-overlay"></div>');
+  jQuery('#modal-overlay').fadeIn('1500');
+  jQuery('.nav').fadeIn('1500');
+});
+
+jQuery(document).on('click', '#modal-overlay', function() {
+  jQuery('#modal-overlay').fadeOut('1500');
+  jQuery('.nav').fadeOut('1500');
+});
