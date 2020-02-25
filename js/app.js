@@ -73,6 +73,31 @@
 
 // });
 
+
+//sticky header ~headerの高さスクロールしたら、登場~
+$('#header').each(function(){
+    var $window = $(window),
+    $stickyHeader = $(this).find('.sticky-header'),//スティッキーヘッダー
+    stickyHeaderHeight = $stickyHeader.outerHeight(),//スティッキーヘッダーの高さ
+    headerHeight = $(this).outerHeight();//ヘッダー全体の高さ
+
+    //画面外へ
+    $stickyHeader.css({ top: '-' + stickyHeaderHeight + 'px' });
+
+    //ページの一番上からヘッダーの高さ分下方向にスクロールしたらtopを0に、それ以外は画面外へ
+    $window.on('scroll', function(){
+        if($window.scrollTop() > headerHeight) {
+            $stickyHeader.css({top:0});
+        } else {
+            $stickyHeader.css({ top: '-' + stickyHeaderHeight + 'px' });
+       }
+    });
+
+    //任意のタイミングでイベントを発生させる
+    $window.trigger('scroll');
+});
+
+
 //  smooth scroll
 $(function () {
 
@@ -129,6 +154,7 @@ $(function () {
     });
 });
 
+// ハンバーガーメニュー&ドロワーメニュー 
 jQuery('.icon-hamburger').on('click', function() {
   jQuery('header').append('<div id="modal-overlay"></div>');
   jQuery('#modal-overlay').fadeIn('1500');
