@@ -1,39 +1,39 @@
 
-//slideshow
-$(function () {
-    // slideshow クラスを持った要素ごとに処理を実行
-    $('.top').each(function () {
+// //slideshow
+// $(function () {
+//     // slideshow クラスを持った要素ごとに処理を実行
+//     $('.top').each(function () {
 
-        var $slides = $(this).find('img'), // すべてのスライド
-            slideCount = $slides.length,   // スライドの点数
-            currentIndex = 0;              // 現在のスライドを示すインデックス
+//         var $slides = $(this).find('img'), // すべてのスライド
+//             slideCount = $slides.length,   // スライドの点数
+//             currentIndex = 0;              // 現在のスライドを示すインデックス
 
-        // 1 番目のスライドをフェードインで表示
-        $slides.eq(currentIndex).fadeIn();
+//         // 1 番目のスライドをフェードインで表示
+//         $slides.eq(currentIndex).fadeIn();
 
-        // 7500 ミリ秒ごとに showNextSlide 関数を実行
-        setInterval(showNextSlide, 2500);
+//         // 7500 ミリ秒ごとに showNextSlide 関数を実行
+//         setInterval(showNextSlide, 2500);
 
-        // 次のスライドを表示する関数
-        function showNextSlide () {
+//         // 次のスライドを表示する関数
+//         function showNextSlide () {
 
-            // 次に表示するスライドのインデックス
-            // (もし最後のスライドなら最初に戻る)
-            var nextIndex = (currentIndex + 1) % slideCount;
+//             // 次に表示するスライドのインデックス
+//             // (もし最後のスライドなら最初に戻る)
+//             var nextIndex = (currentIndex + 1) % slideCount;
 
-            // 現在のスライドをフェードアウト
-            $slides.eq(currentIndex).fadeOut();
+//             // 現在のスライドをフェードアウト
+//             $slides.eq(currentIndex).fadeOut();
 
-            // 次のスライドをフェードイン
-            $slides.eq(nextIndex).fadeIn();
+//             // 次のスライドをフェードイン
+//             $slides.eq(nextIndex).fadeIn();
 
-            // 現在のスライドのインデックスを更新
-            currentIndex = nextIndex;
-        }
+//             // 現在のスライドのインデックスを更新
+//             currentIndex = nextIndex;
+//         }
 
-    });
+//     });
 
-});
+// });
 
 // //sticky header
 // $(function () {
@@ -109,4 +109,19 @@ $(function () {
         return [];
     }
 
+}); 
+
+// 画像スライダー
+// bg.swircher.js を導入
+       jQuery(function($) {
+    $('.bg-switcher').bgSwitcher({
+        images: ['../img/sea.jpg','../img/beach.jpg','../img/sunset.jpg','../img/sky.jpg'], // 切り替え画像
+        Interval: 5000, //切り替えの間隔 1000=1秒
+        start: true, //$.fn.bkkkgswitcher(config)をコールした時に切り替えを開始する
+        loop: true, //切り替えをループする
+        shuffle: false, //背景画像の順番をシャッフルする
+        effect: "fade", //エフェクトの種類 "fade" "blind" "clip" "slide" "drop" "hide"
+        duration: 1000, //エフェクトの時間 1000=1秒
+        easing: "swing", //エフェクトのイージング "swing" "linear"
+    });
 });
