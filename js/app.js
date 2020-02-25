@@ -115,8 +115,9 @@ $(function () {
 // bg.swircher.js を導入
   jQuery(function($) {
     $('.bg-switcher').bgSwitcher({
-        images: ['../img/sea.jpg','../img/beach.jpg','../img/sunset.jpg','../img/sky.jpg'], // 切り替え画像
-        Interval: 5000, //切り替えの間隔 1000=1秒
+        // images: ['../img/sea.jpg','../img/beach.jpg','../img/sunset.jpg','../img/sky.jpg'], // 切り替え画像
+        images: ['./img/sea.jpg','./img/beach.jpg','./img/sunset.jpg','./img/sky.jpg'], //githubpage 用 
+        Interval: 3000, //切り替えの間隔 1000=1秒
         start: true, //$.fn.bkkkgswitcher(config)をコールした時に切り替えを開始する
         loop: true, //切り替えをループする
         shuffle: false, //背景画像の順番をシャッフルする
