@@ -1,0 +1,12 @@
+.top {
+    background: url('/img/sky.jpg') center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+}
+.contact {
+  
+  &-announcement {
+    margin:0 0 30px;
+  }
+}

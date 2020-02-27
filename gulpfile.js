@@ -3,6 +3,8 @@ const browserSync = require('browser-sync').create()
 const sass = require("gulp-sass"); // Sassをコンパイルするプラグインの読み込み
 const packageImporter = require('node-sass-package-importer');
 const sassGlob = require( 'gulp-sass-glob' );
+const plumber = require( 'gulp-plumber' );
+const notify = require( 'gulp-notify' );
 // const autoprefixer = require('gulp-autoprefixer'); //ベンダープレフィックス補完
 // const sourcemaps = require('gulp-sourcemaps'); //コンパイル前のソースコードを確認できるようにするためのコンパイル前後の関係を表したもの
 // const cleanCSS = require('gulp-clean-css'); //cssファイル圧縮
@@ -35,6 +37,7 @@ const paths = {
 
 gulp.task('sass', done => {
   gulp.src(paths.src.scss)
+  .pipe(plumber({ errorHandler: notify.onError('Error: &lt;%= error.message %&gt;') }))//watch中にエラーが起きても止まらない
   .pipe(sassGlob() ) //importの読み込みを簡潔にする
   .pipe(sass({
       importer: packageImporter({
@@ -44,7 +47,8 @@ gulp.task('sass', done => {
   // .pipe(sourcemaps.init())
   .pipe(sass({
     outputStyle: 'expanded',
-  }).on('error', sass.logError))
+  })
+    .on('error', sass.logError))
   // .pipe(autoprefixer({
   //   browsers: ['last 2 versions'],
   // }))
