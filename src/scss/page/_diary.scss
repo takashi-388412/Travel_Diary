@@ -1,0 +1,12 @@
+/* ==================================
+* dairy
+*=================================== */
+.top {
+
+  &-diary {
+    background: url('/img/beach.jpg') center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+  }
+}
