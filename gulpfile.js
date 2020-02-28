@@ -11,7 +11,10 @@ const sourcemaps = require('gulp-sourcemaps'); //コンパイル前のソース�
 const cleanCSS = require('gulp-clean-css'); //cssファイル圧縮
 const rename = require('gulp-rename'); //ファイル名リネーム(圧縮した css のファイル名に.minを追加)
 const imagemin = require("gulp-imagemin"); //画像圧縮
-const autoprefixer = require('gulp-autoprefixer'); //ベンダープレフィックス補完
+const postcss = require( 'gulp-postcss' ); //postcss 本体(sassのフレームワーク) 
+const autoprefixer = require("autoprefixer"); //ベンダープレフィックス補完
+const cssdeclsort = require( 'css-declaration-sorter' );　// プロパティをソートし直してくれるもの
+const mmq = require( 'gulp-merge-media-queries' ); //メディアクエリを1つにまとめてくれる
 
 
 //  browser 初期パス指定
@@ -43,29 +46,33 @@ const paths = {
 // sassコンパイタスク
 gulp.task('sass', done => {
   gulp.src(paths.src.scss)
+    // .pipe(plumber({ errorHandler: notify.onError('Error: &lt;%= error.message %&gt;') }))//watch中にエラーが起きても止まらない
     .pipe(sourcemaps.init()) //順番大切
-    .pipe(plumber({ errorHandler: notify.onError('Error: &lt;%= error.message %&gt;') }))//watch中にエラーが起きても止まらない
     .pipe(sassGlob()) //importの読み込みを簡潔にする
     .pipe(sass({
       importer: packageImporter({
         extensions: ['.scss', '.css'] //scssファイルでcssの読み込みOK
       })
     }))
-  // .pipe(sourcemaps.init())  //ここだと動作しない
+    // .pipe(sourcemaps.init())  //ここだと動作しない
     .pipe(sass({
       outputStyle: 'expanded',
     })
     .on('error', sass.logError))
-    .pipe(autoprefixer()) //vendor prefix 付与
-    .pipe(sourcemaps.write()) //開発ツールで見るとsassファイルの場所が分かる。
+    .pipe(postcss([cssdeclsort({ order: 'alphabetical' })])) //cssの順番並び替え error
+    .pipe(postcss([autoprefixer()]))//vendor prefix 付与 error
+    .pipe(mmq()) //media queryを1箇所にまとめる
+    .pipe(sourcemaps.write()) //順番大切
+    .pipe(plumber({ errorHandler: notify.onError('Error: &lt;%= error.message %&gt;') }))//watch中にエラーが起きても止まらない
     .pipe(gulp.dest(paths.dist.css))
     .pipe(cleanCSS())
     .pipe(rename({
       suffix: '.min',
-    }))
+     }))
     .pipe(gulp.dest(paths.dist.css));
-  done();
+    done();
 });
+
 
 //JS bundle化 webpackタスク
 const webpackConfig = require("./webpack.config"); // webpackの設定ファイルの読み込み
@@ -98,3 +105,10 @@ gulp.task('default', gulp.series(gulp.parallel('serve', 'sass','bundle.js' ,'wat
 // gulp.task('dev', () => {
 //   gulp.watch(paths.src.scss, gulp.task('sass'));
 // });
+
+//package.jsonに記入
+  // "browserslist": [
+  //   "last 2 version",
+  //   "> 5%",
+  //   "ie >= 9"
+  // ]
