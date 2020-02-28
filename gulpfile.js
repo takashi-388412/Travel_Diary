@@ -59,7 +59,7 @@ gulp.task('sass', done => {
       outputStyle: 'expanded',
     })
     .on('error', sass.logError))
-    .pipe(postcss([cssdeclsort({ order: 'alphabetically' })])) //cssの順番並び替え error
+    .pipe(postcss([cssdeclsort({ order: 'alphabetical' })])) //cssの順番並び替え error
     .pipe(postcss([autoprefixer()]))//vendor prefix 付与 error
     .pipe(mmq()) //media queryを1箇所にまとめる
     .pipe(sourcemaps.write()) //順番大切
