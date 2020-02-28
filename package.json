@@ -23,15 +23,9 @@
     "webpack-stream": "^5.2.1"
   },
   "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/takashi-388412/Travel_Diary.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/takashi-388412/Travel_Diary/issues"
-  },
-  "homepage": "https://github.com/takashi-388412/Travel_Diary#readme"
+  "browserslist": [
+  "last 2 version",
+  "> 5%",
+  "ie >= 9"
+]
 }

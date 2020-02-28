@@ -56,9 +56,7 @@ gulp.task('sass', done => {
       outputStyle: 'expanded',
     })
     .on('error', sass.logError))
-  // .pipe(autoprefixer({
-  //   browsers: ['last 2 versions'],
-  // }))
+    .pipe(autoprefixer()) //vendor prefix 付与
     .pipe(sourcemaps.write()) //開発ツールで見るとsassファイルの場所が分かる。
     .pipe(gulp.dest(paths.dist.css))
     .pipe(cleanCSS())
