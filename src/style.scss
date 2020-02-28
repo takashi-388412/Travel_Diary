@@ -2,12 +2,12 @@
 /* --------------------------------
 *  setting・・・変数を格納
 * -------------------------------- */
-@import "./scss/setting/**";
+@import "./sass/setting/**";
 
 /* --------------------------------
 *  mixin・・・アニメーションやmixinや関数を格納
 * -------------------------------- */
-@import "./scss/mixin/**";
+@import "./sass/mixin/**";
 
 /* --------------------------------
 *  reset用
@@ -18,19 +18,19 @@
 /* --------------------------------
 *  base・・・リセットCSSや要素の基本となるCSSを格納
 * -------------------------------- */
-@import "./scss/base/**";
+@import "./sass/base/**";
 
 /* --------------------------------
 *  module・・・使い回しできるモジュール的なCSSを格納
 * -------------------------------- */
-@import "./scss/module/**";
+@import "./sass/module/**";
 
 /* --------------------------------
 *  page・・・ページごとに必要なCSSを格納
 * -------------------------------- */
 // @import "./scss/page/**";
-@import "./scss/page/_main.scss";
-@import "./scss/page/_contact.scss";
-@import "./scss/page/_about.scss";
-@import "./scss/page/_diary.scss";
+@import "./sass/page/_main.scss";
+@import "./sass/page/_contact.scss";
+@import "./sass/page/_about.scss";
+@import "./sass/page/_diary.scss";
 
