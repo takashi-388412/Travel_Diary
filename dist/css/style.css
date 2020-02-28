@@ -48,7 +48,7 @@
 }
 
 .scroll-button::before {
-  content: url("/Travel_Diary/img/sprites.png");
+  content: url("/img/sprites.png");
   display: inline-block;
   font-size: 0;
   line-height: 0;
