@@ -1,8 +1,7 @@
-const gulp = require('gulp'); //gulp
-const webpack = require("webpack");  //
-const webpackStream = require("webpack-stream"); //webpackを
+const gulp = require('gulp'); //gulp本体 v 4.0.2
+const webpack = require("webpack");  //webpack本体 v 4.41.6
+const webpackStream = require("webpack-stream"); //webpackをgulpで使用する為のプラグイン
 const browserSync = require('browser-sync').create() //画面をリロード
-const imagemin = require("gulp-imagemin"); //画像圧縮
 const sass = require("gulp-sass"); // Sassをコンパイルするプラグインの読み込み
 const packageImporter = require('node-sass-package-importer');
 const sassGlob = require( 'gulp-sass-glob' ); //sassをパーシャル化
@@ -11,6 +10,7 @@ const notify = require( 'gulp-notify' ); //error通知を出す
 const sourcemaps = require('gulp-sourcemaps'); //コンパイル前のソースコードを確認できるようにするためのコンパイル前後の関係を表したもの
 const cleanCSS = require('gulp-clean-css'); //cssファイル圧縮
 const rename = require('gulp-rename'); //ファイル名リネーム(圧縮した css のファイル名に.minを追加)
+const imagemin = require("gulp-imagemin"); //画像圧縮
 const autoprefixer = require('gulp-autoprefixer'); //ベンダープレフィックス補完
 
 
@@ -34,10 +34,10 @@ gulp.task('bs-reload', function (done) {
 const paths = {
   'src': {
     'scss': './src/style.scss',
-    // 'scss': './src/scss/**/*.scss',
   },
   'dist': {
     'css': './dist/css/',
+    'js': './dist/js/',
   }
 };
 // sassコンパイタスク
@@ -59,7 +59,7 @@ gulp.task('sass', done => {
   // .pipe(autoprefixer({
   //   browsers: ['last 2 versions'],
   // }))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write()) //開発ツールで見るとsassファイルの場所が分かる。
     .pipe(gulp.dest(paths.dist.css))
     .pipe(cleanCSS())
     .pipe(rename({
@@ -67,6 +67,13 @@ gulp.task('sass', done => {
     }))
     .pipe(gulp.dest(paths.dist.css));
   done();
+});
+
+//JS bundle化 webpackタスク
+const webpackConfig = require("./webpack.config"); // webpackの設定ファイルの読み込み
+gulp.task("bundle.js", () => { // タスクの定義。 ()=> の部分はfunction() でも可
+  return webpackStream(webpackConfig, webpack)   // ☆ webpackStreamの第2引数にwebpackを渡す☆
+    .pipe(gulp.dest(paths.dist.js));
 });
 
 // // img 画像圧縮
@@ -79,14 +86,14 @@ gulp.task('sass', done => {
 //ファイル変更時に行うタスク
 gulp.task('watch', function (done) {
   gulp.watch('./*.html', gulp.task('bs-reload'));
-  // gulp.watch('./css/*.css', gulp.task('bs-reload'));
-  gulp.watch('./js/*.js', gulp.task('bs-reload'));
   gulp.watch('./src/**/*.scss', gulp.task('sass'));
-  gulp.watch('./src/**/*.scss', gulp.task('bs-reload'));
+  gulp.watch('./src/**/*.scss', gulp.task('bs-reload')); //bundle後に画面更新
+  gulp.watch('./src/**/*.js', gulp.task('bundle.js'));
+  gulp.watch('./src/**/*.js', gulp.task('bs-reload')); //bundle後に画面更新
 })
 
 //npx gulpと打ち込んだ時に行う処理
-gulp.task('default', gulp.series(gulp.parallel('serve', 'sass', 'watch')));
+gulp.task('default', gulp.series(gulp.parallel('serve', 'sass','bundle.js' ,'watch')));
 // gulp.task('default', gulp.series(gulp.parallel('serve', 'sass', 'watch','imagemin')));
 
 // // npm run devで実行される
