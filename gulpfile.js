@@ -83,7 +83,7 @@ gulp.task("bundle.js", () => { // タスクの定義。 ()=> の部分はfunctio
 
 // img 画像圧縮
 gulp.task("imagemin", () =>
-  gulp.src("img/**")  // 画像のマッチパターン
+  gulp.src("./src/img/**")  // 画像のマッチパターン
       .pipe(imagemin())  // 画像の最適化処理
       .pipe(gulp.dest("dist/img"))  // 最適化済みの画像を書き出すフォルダー
 );
