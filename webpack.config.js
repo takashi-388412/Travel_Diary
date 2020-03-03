@@ -5,8 +5,8 @@ module.exports = {
   // mode: "development",
 
   // メインのJS
-  // entry: "./src/app.js",
   entry: "./src/app.js",
+
   // 出力ファイル名
   output: {
     filename: "bundle.js"
