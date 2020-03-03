@@ -5,7 +5,6 @@
 @import "~normalize.css";
 // @import "~reset.css";
 /* --------------------------------
-
 *  setting・・・変数を格納
 * -------------------------------- */
 @import "./sass/setting/**";
@@ -30,8 +29,8 @@
 *  page・・・ページごとに必要なCSSを格納
 * -------------------------------- */
 // @import "./scss/page/**";
-@import "./sass/page/_main.scss";
-@import "./sass/page/_contact.scss";
-@import "./sass/page/_about.scss";
-@import "./sass/page/_diary.scss";
+@import "./scss/page/_main.scss";
+@import "./scss/page/_contact.scss";
+@import "./scss/page/_about.scss";
+@import "./scss/page/_diary.scss";
 
