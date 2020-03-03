@@ -3,7 +3,7 @@ const webpack = require("webpack");  //webpack本体 v 4.41.6
 const webpackStream = require("webpack-stream"); //webpackをgulpで使用する為のプラグイン
 const browserSync = require('browser-sync').create() //画面をリロード
 const sass = require("gulp-sass"); // Sassをコンパイルするプラグインの読み込み
-const packageImporter = require('node-sass-package-importer');
+const packageImporter = require('node-sass-package-importer'); //scssでcssファイルを読み込み
 const sassGlob = require( 'gulp-sass-glob' ); //sassをパーシャル化
 const plumber = require( 'gulp-plumber' ); //error時に止めずに実行し続ける
 const notify = require( 'gulp-notify' ); //error通知を出す
@@ -85,7 +85,7 @@ gulp.task("bundle.js", () => { // タスクの定義。 ()=> の部分はfunctio
 gulp.task("imagemin", () =>
   gulp.src("./src/img/**")  // 画像のマッチパターン
       .pipe(imagemin())  // 画像の最適化処理
-      .pipe(gulp.dest("dist/img"))  // 最適化済みの画像を書き出すフォルダー
+      .pipe(gulp.dest("./dist/img"))  // 最適化済みの画像を書き出すフォルダー
 );
 
 //ファイル変更時に行うタスク
