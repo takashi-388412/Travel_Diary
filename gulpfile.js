@@ -3,11 +3,11 @@ const webpack = require("webpack");  //webpack本体 v 4.41.6
 const webpackStream = require("webpack-stream"); //webpackをgulpで使用する為のプラグイン
 const browserSync = require('browser-sync').create() //画面をリロード
 const sass = require("gulp-sass"); // Sassをコンパイルするプラグインの読み込み
-const packageImporter = require('node-sass-package-importer'); //scssでcssファイルを読み込み
+const packageImporter = require('node-sass-package-importer'); // scssファイルでcssを読み込めるようにする
 const sassGlob = require( 'gulp-sass-glob' ); //sassをパーシャル化
 const plumber = require( 'gulp-plumber' ); //error時に止めずに実行し続ける
 const notify = require( 'gulp-notify' ); //error通知を出す
-const sourcemaps = require('gulp-sourcemaps'); //コンパイル前のソースコードを確認できるようにするためのコンパイル前後の関係を表したもの
+// const sourcemaps = require('gulp-sourcemaps'); //コンパイル前のソースコードを確認できるようにするためのコンパイル前後の関係を表したもの
 const cleanCSS = require('gulp-clean-css'); //cssファイル圧縮
 const rename = require('gulp-rename'); //ファイル名リネーム(圧縮した css のファイル名に.minを追加)
 const imagemin = require("gulp-imagemin"); //画像圧縮
@@ -47,7 +47,7 @@ const paths = {
 gulp.task('sass', done => {
   gulp.src(paths.src.scss)
     // .pipe(plumber({ errorHandler: notify.onError('Error: &lt;%= error.message %&gt;') }))//watch中にエラーが起きても止まらない
-    .pipe(sourcemaps.init()) //順番大切
+    // .pipe(sourcemaps.init()) //順番大切
     .pipe(sassGlob()) //importの読み込みを簡潔にする
     .pipe(sass({
       importer: packageImporter({
@@ -62,7 +62,7 @@ gulp.task('sass', done => {
     .pipe(postcss([cssdeclsort({ order: 'alphabetical' })])) //cssの順番並び替え error
     .pipe(postcss([autoprefixer()]))//vendor prefix 付与 error
     .pipe(mmq()) //media queryを1箇所にまとめる
-    .pipe(sourcemaps.write()) //順番大切
+    // .pipe(sourcemaps.write()) //順番大切
     .pipe(plumber({ errorHandler: notify.onError('Error: &lt;%= error.message %&gt;') }))//watch中にエラーが起きても止まらない
     .pipe(gulp.dest(paths.dist.css))
     .pipe(cleanCSS())
