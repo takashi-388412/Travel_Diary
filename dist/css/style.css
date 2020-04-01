@@ -324,79 +324,37 @@ a:visited {
 * global_nav
 *=================================== */
 
-.nav-item {
-	display: inline-block; /*nav-itemを横並びに*/
-	padding: 0 15px;
+#global-nav {
+	width: 100%;
 }
 
-.nav-item a {
-	color: #fff;
-	-webkit-transition-duration: 250ms;
-	transition-duration: 250ms;
-}
-
-.nav-item a:hover {
-	border-bottom: 2px solid #fff;
-	padding-bottom: 10px;
-}
-
-#modal-overlay {
-	background-color: rgba(0, 0, 0, 0.6);
-	display: none;
-	height: 120%;
+#global-nav.m_fixed {
+	background-color: rgba(255, 255, 100, 0.7);
 	left: 0;
 	position: fixed;
 	top: 0;
-	width: 100%;
-	z-index: 99;
 }
 
-.icon-wrapper {
-	text-align: right;
+#global-nav .global-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
 }
 
-.icon-hamburger {
-	border: 1px solid #ccc;
-	cursor: pointer;
-	display: none;
-	height: 50px;
-	margin: 10px 10px 0px;
-	margin-bottom: 0.4em;
-	position: relative;
-	width: 50px;
-}
-
-.icon-hamburger span {
-	background: #cccccc;
+#global-nav .global-item a {
+	color: #000;
 	display: block;
-	height: 16%;
-	left: 50%;
-	margin: -8% 0 0 -42%;
-	position: absolute;
-	top: 50%;
-	width: 84%;
+	font-size: 1.2em;
+	line-height: 50px;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
 }
 
-.icon-hamburger span::before,
-.icon-hamburger span::after {
-	background: #cccccc;
-	content: "";
-	display: block;
-	height: 100%;
-	left: 50%;
-	margin: -8% 0 0 -50%;
-	position: absolute;
-	right: 0;
-	top: 50%;
-	width: 100%;
-}
-
-.icon-hamburger span::before {
-	margin-top: -38%;
-}
-
-.icon-hamburger span::after {
-	margin-top: 19%;
+#global-nav .global-item a:hover {
+	border-bottom: 2px dotted #000;
+	opacity: 0.5;
 }
 
 /* ==================================
@@ -404,50 +362,15 @@ a:visited {
 *=================================== */
 
 .header {
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	height: 80px;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-	left: 0;
-	padding: 60px 100px;
-	position: absolute; /*logo と nav を横並びに*/
-	top: 0;
-	width: 100%;
-	z-index: 1;
+	height: 150px;
 }
 
-.sticky-header {
-	background-color: rgba(0, 0, 0, 0.6);
-	height: 50px;
-	margin-left: -100px;
-	position: fixed;
-	-webkit-transition: 0.25s;
-	transition: 0.25s;
-	width: 100%;
-	z-index: 100;
-}
-
-.sticky-item {
-	display: inline-block;
-	margin: 0 20px;
-}
-
-.sticky-item a {
-	color: #fff;
-}
-
-.sticky-item a:hover {
-	opacity: 0.5;
+.logo {
+	padding: 40px 0 20px;
 }
 
 .logo a {
-	color: #fff;
+	color: #000;
 	font-size: 2em;
 }
 
@@ -470,7 +393,6 @@ a:visited {
 .bg-switcher {
 	background-position: center center;
 	background-size: cover;
-	border-radius: 300px;
 	height: 100vh;
 	width: 100%;
 }
@@ -655,56 +577,6 @@ a:visited {
 
 .container {
 	padding: 0 50px 80px;
-}
-
-.nav {
-	-webkit-transform: translate(-50%, -50%);
-	background: #fff;
-	display: none;
-	height: auto;
-	left: 50%;
-	position: fixed;
-	top: 50%;
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	width: 80%;
-	z-index: 100;
-}
-
-.nav-menu {
-	padding: 0;
-}
-
-.nav-item {
-	display: block;
-	padding: 10px 0px;
-}
-
-.nav-item a {
-	border-bottom: 2px solid #000;
-	color: #000;
-	display: block;
-	padding: 10px 0px;
-	-webkit-transition-duration: initial;
-	transition-duration: initial;
-}
-
-.nav-item a:hover {
-	border-bottom: 2px solid #000;
-	padding-bottom: 0;
-}
-
-.icon-hamburger {
-	display: inline-block;
-}
-
-.header {
-	display: block;
-	padding: 0;
-}
-
-.sticky-header {
-	display: none;
 }
 
 .logo {

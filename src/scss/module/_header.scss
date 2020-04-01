@@ -2,101 +2,20 @@
 * header
 *=================================== */
 .header {
-  position: absolute;
-  // position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /*logo と nav を横並びに*/
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 80px;
-  padding: 60px 100px;
+  height: 150px;
   @include tb {
-    display: block;
-    padding: 0;
+
   }
 }
-// sticky-header
-.sticky {
-   &-header {
-      position: fixed;
-      width: 100%;
-      height: 50px;
-      z-index: 100;
-      transition: 0.25s;
-      background-color: rgba(0,0,0,0.60);
-      //なぜか100px指定されている
-      margin-left: -100px;
-      @include tb() {
-        display: none;
-      }
-   }
-    &-nav {
-
-    }
-    &-menu {
-
-    }
-    &-item {
-      display: inline-block;
-      margin: 0 20px;
-      
-      & a {
-        color: #fff;
-      }
-      & a:hover {
-        opacity: 0.5;
-      }
-    }
-}
-// /*sticky header*/
-// .header-clone {
-//     background-color: rgb(0, 0, 0);
-//     opacity: 0.9;
-//     position: fixed;
-//     top: -15px;
-//     width: 100%;
-//     z-index: 30;
-//     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-//             box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-//     -webkit-transition: top 0.25s;
-//             transition: top 0.25s;
-// }
-// .header-clone.visible {
-//     top: 0;
-// }
-// .header-clone:hover {
-//     opacity: 1;
-// }
-// .header-clone .site-logo {
-//     margin-left: 8px;
-// }
-// .header-clone .site-logo a {
-//     display: block;
-//     width: 143px;
-//     height: 32px;
-//     overflow: hidden;
-// }
-// .header-clone .site-logo a:before {
-//     display: inline-block;
-// }
-// .header-clone .nav {
-//     font-size: 14px;
-//     line-height: 35px;
-// }
-// .header-clone .nav a {
-//     color: rgb(128, 128, 128);
-// }
-
+// site_logo
 .logo {
+  padding: 40px 0 20px;
   @include tb() {
-       display: none;
+    display: none;
   }
 }
 .logo a{
-  color: #fff;
+  color: #000;
   font-size: 2em;
 }
 .logo a:hover{
