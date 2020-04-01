@@ -1,3 +1,38 @@
 /* ==================================
 * footer_nav
 *=================================== */
+.footer {
+  &_nav {
+    padding: 30px 0;
+    background-color: #dcdcdc;
+    @include mq() {
+    padding: 0;
+    }
+  }
+  &_menu {
+    display: flex;
+    justify-content: center;
+    @include mq() {
+    flex-direction: column;//縦並び
+    }
+  }
+  &_item {
+    list-style-type: none;
+    padding: 0 30px;
+    // background-color: #dcdcdc;
+    @include mq() {
+      border: 1px solid black;
+      padding: 15px 0;
+    }
+    & a {
+      color: #000;
+      transition: 0.3s;
+      @include mq () {
+      display: block;
+      }
+    }
+    & a:hover {
+      color: #fff;
+    }
+  }
+}

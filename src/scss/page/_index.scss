@@ -30,6 +30,9 @@
   &-text {
     font-size: 1.5em;
     line-height: 1.5em;
+    @include mq() {
+    font-size: 1.0em;
+    }
   //   writing-mode: vertical-rl;
   //   letter-spacing: 5px;
   //   text-align: initial;
@@ -148,6 +151,7 @@
     margin: 0 auto;
     border-radius: 50%;
     outline: none;
+    margin-bottom: 50px;
 }
 .back-to-top:hover {
     box-shadow: 5px 5px 5px rgba(0,0,0,0.20);
