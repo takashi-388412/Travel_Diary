@@ -1,9 +1,8 @@
-
 /* --------------------------------
 *  reset用
 * -------------------------------- */
-@import "~normalize.css";
-// @import "~reset.css";
+// @import "~normalize.css";
+@import "~reset.css";
 /* --------------------------------
 *  setting・・・変数を格納
 * -------------------------------- */
@@ -13,7 +12,6 @@
 *  mixin・・・アニメーションやmixinや関数を格納
 * -------------------------------- */
 @import "./scss/mixin/**";
-
 
 /* --------------------------------
 *  base・・・リセットCSSや要素の基本となるCSSを格納
@@ -29,7 +27,7 @@
 *  page・・・ページごとに必要なCSSを格納
 * -------------------------------- */
 // @import "./scss/page/**";
-@import "./scss/page/_main.scss";
+@import "./scss/page/_index.scss";
 @import "./scss/page/_contact.scss";
 @import "./scss/page/_about.scss";
 @import "./scss/page/_diary.scss";
