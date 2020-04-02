@@ -7,40 +7,44 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <!-- source map 付き -->
-  <link rel="stylesheet" href="./dist/css/style.css"> 
-  <!-- <link rel="stylesheet" href="./dist/css/style.min.css"> -->
+  <!-- <link rel="stylesheet" href="./dist/css/style.css">  -->
+  <link rel="stylesheet" href="./dist/css/style.min.css">
 </head>
 <body>
 
 <header class="header" id="header">
+  <!-- site_logo -->
   <h1 class="logo">
-    <a href="./index.html">sample</a>
+    <a href="./index.html">Travel Diary</a>
   </h1>
-
-<div class="icon-wrapper">
-    <div class="icon-hamburger">
-      <span></span>
+  <!-- 768px 以上で表示されるエリア -->
+  <!-- global_nav -->
+  <nav id="global-nav">
+    <ul class="global-list">
+      <li class="global-item"><a href="./index.html">TOP</a></li>
+      <li class="global-item"><a href="./about.html">ABOUT</a></li>
+      <li class="global-item"><a href="./diary.html">DIARY</a></li>
+      <li class="global-item"><a href="./contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+  <!-- 768px 以下で表示されるエリア -->
+  <div id="nav-drawer">
+    <!-- checkbox onとoffと連動している-->
+    <input id="nav-input" type="checkbox" class="nav-unshown">
+    <!-- checkbox on-->
+    <label id="nav-open" for="nav-input"><span></span></label>
+    <!-- checkbox off-->
+    <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+    <!-- drawer-menu area -->
+    <div id="nav-content">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="./index.html">TOP</a></li>
+        <li class="nav-item"><a href="./about.html">ABOUT</a></li>
+        <li class="nav-item"><a href="./diary.html">DIARY</a></li>
+        <li class="nav-item"><a href="./contact.html">CONTACT</a></li>
+      </ul>
     </div>
 </div>
-  <nav class="nav">
-    <ul class="nav-menu">
-      <li class="nav-item"><a href="./index.html">TOP</a></li>
-      <li class="nav-item"><a href="./about.html">ABOUT</a></li>
-      <li class="nav-item"><a href="./diary.html">DIARY</a></li>
-      <li class="nav-item"><a href="./contact.html">CONTACT</a></li>
-    </ul>
-  </nav>
-  <!-- sticky header -->
-  <div class="sticky-header">
-  <nav class="sticky-nav">
-    <ul class="sticky-menu">
-      <li class="nav-item"><a href="./index.html">TOP</a></li>
-      <li class="nav-item"><a href="./about.html">ABOUT</a></li>
-      <li class="nav-item"><a href="./diary.html">DIARY</a></li>
-      <li class="nav-item"><a href="./contact.html">CONTACT</a></li>
-    </ul>
-  </nav>
-  </div>
 </header>
 
 <!-- main -->
@@ -54,109 +58,184 @@
     <section class="container about" id="about">
       <h2 class="heading">ABOUT</h2>
       <div class="about-wrapper">
-      <!-- <div class="about-wrapper clearfix"> -->
         <p class="about-text">
-          「旅」
+         Lsorem ipsum dolor sit amet, consectetur adipiscing elit. <br>   
+         Praesent facilisis ex a sapien semper maximus.<br>
+         Fusce condimentum blandit tincidunt.<br>
+         Nunc et imperdiet velit.<br>
+         Sed eu facilisis enim.<br>
+         Pellentesque faucibus purus a maximus interdum.<br>
+         Vestibulum ac dapibus magna, sed lobortis erat.<br>
+         Vivamus mattis pellentesque bibendum.<br>
+         Nullam auctor augue eu accumsan convallis.<br>
+        </p>
+        <!-- <p class="about-text">
         </p>
         <p class="about-text">
-          旅に対してどんなイメージを持っていますか？<br>
         </p>
         <p class="about-text">
-          インターネットがあるから海外旅行なんてしなくてもいい。<br>
-          日本が一番安全だから、海外なんて行かなくてもいい。
         </p>
         <p class="about-text">
-          一理ありますが、実際に現地に行って、見て感じた経験は<br>
-          一生の宝になります。
-        </p>
-        <p class="about-text">
-          <br>
-        </p>
+        </p> -->
       </div>
     </section>
     <!-- DIARY -->
     <section class="container diary" id="diary">
       <h2 class="heading" >DIARY</h2>
       <div class="diary-wrapper">
-        <!-- box1 -->
+        <!-- 1行目 -->
         <div class="diary-box">
-          <a href="#">
-            <img class="diary-image" src="./dist/img/sky.jpg">
-            <p class="diary-title">TEST</p>
-            <span class="diary-country">JAPAN</span>
-            <time class="diary-date" datetime="2020-02-21">2020.02.21 ~ 03.21</time>
+          <a href="diary.html">
+            <figure class="effect-color1">
+              <img class="diary-image" src="./src/img/diary_img/Japan.jpg">
+            </figure>
+            <p class="diary-title">Japan</p>
+            <time class="diary-date" datetime="2020-02-21">2020.02.21 ~ 02.22</time>
           </a>
         </div>
         <div class="diary-box">
-          <a href="#">
-            <img class="diary-image" src="./dist/img/sky.jpg">
-            <p class="diary-title">TEST</p>
-            <span class="diary-country">JAPAN</span>
-            <time class="diary-date" datetime="2020-02-21">2020.02.21 ~ 03.21</time>
+          <a href="diary.html">
+            <figure class="effect-color1">
+              <img class="diary-image" src="./src/img/diary_img/India.jpg">
+            </figure>
+            <p class="diary-title">India</p>
+            <time class="diary-date" datetime="2020-02-21">2020.02.23 ~ 02.24</time>
           </a>
         </div>
         <div class="diary-box">
-          <a href="#">
-            <img class="diary-image" src="./dist/img/sky.jpg">
-            <p class="diary-title">TEST</p>
-            <span class="diary-country">JAPAN</span>
-            <time class="diary-date" datetime="2020-02-21">2020.02.21 ~ 03.21</time>
+          <a href="diary.html">
+            <figure class="effect-color1">
+              <img class="diary-image" src="./src/img/diary_img/Iran.jpg">
+            </figure>
+            <p class="diary-title">Iran</p>
+            <time class="diary-date" datetime="2020-02-21">2020.02.25 ~ 02.26</time>
           </a>
         </div>
         <div class="diary-box">
-          <a href="#">
-            <img class="diary-image" src="./dist/img/sky.jpg">
-            <p class="diary-title">TEST</p>
-            <span class="diary-country">JAPAN</span>
-            <time class="diary-date" datetime="2020-02-21">2020.02.21 ~ 03.21</time>
+          <a href="diary.html">
+            <figure class="effect-color1">
+              <img class="diary-image" src="./src/img/diary_img/Italia.jpg">
+            </figure>
+            <p class="diary-title">Italia</p>
+            <time class="diary-date" datetime="2020-02-21">2020.02.27 ~ 02.28</time>
+          </a>
+        </div>
+        <!-- 2行目 -->
+        <div class="diary-box">
+          <a href="diary.html">
+            <figure class="effect-color2">
+              <img class="diary-image" src="./src/img/diary_img/France.jpg">
+            </figure>
+            <p class="diary-title">France</p>
+            <time class="diary-date" datetime="2020-02-21">2020.03.01 ~ 03.02</time>
           </a>
         </div>
         <div class="diary-box">
-          <a href="#">
-            <img class="diary-image" src="./dist/img/sky.jpg">
-            <p class="diary-title">TEST</p>
-            <span class="diary-country">JAPAN</span>
-            <time class="diary-date" datetime="2020-02-21">2020.02.21 ~ 03.21</time>
+          <a href="diary.html">
+            <figure class="effect-color2">
+              <img class="diary-image" src="./src/img/diary_img/UK.jpg">
+            </figure>
+            <p class="diary-title">UK</p>
+            <time class="diary-date" datetime="2020-02-21">2020.03.03 ~ 03.04</time>
           </a>
         </div>
         <div class="diary-box">
-          <a href="#">
-            <img class="diary-image" src="./dist/img/sky.jpg">
-            <p class="diary-title">TEST</p>
-            <span class="diary-country">JAPAN</span>
-            <time class="diary-date" datetime="2020-02-21">2020.02.21 ~ 03.21</time>
+          <a href="diary.html">
+            <figure class="effect-color2">
+              <img class="diary-image" src="./src/img/diary_img/USA.jpg">
+            </figure>
+            <p class="diary-title">USA</p>
+            <time class="diary-date" datetime="2020-02-21">2020.03.05 ~ 03.06</time>
           </a>
         </div>
         <div class="diary-box">
-          <a href="#">
-            <img class="diary-image" src="./dist/img/sky.jpg">
-            <p class="diary-title">TEST</p>
-            <span class="diary-country">JAPAN</span>
-            <time class="diary-date" datetime="2020-02-21">2020.02.21 ~ 03.21</time>
+          <a href="diary.html">
+            <figure class="effect-color2">
+              <img class="diary-image" src="./src/img/diary_img/Brasil.jpg">
+            </figure>
+            <p class="diary-title">Brasil</p>
+            <time class="diary-date" datetime="2020-03-07">2020.03.07 ~ 03.08</time>
+          </a>
+        </div>
+        <!-- 3行目 -->
+        <div class="diary-box">
+          <a href="diary.html">
+            <figure class="effect-color3">
+              <img class="diary-image" src="./src/img/diary_img/Bolivia.jpg">
+            </figure>
+            <p class="diary-title">Bolivia</p>
+            <time class="diary-date" datetime="2020-03-07">2020.03.07 ~ 03.08</time>
           </a>
         </div>
         <div class="diary-box">
-          <a href="#">
-            <img class="diary-image" src="./dist/img/sky.jpg">
-            <p class="diary-title">TEST</p>
-            <span class="diary-country">JAPAN</span>
-            <time class="diary-date" datetime="2020-02-21">2020.02.21 ~ 03.21</time>
+          <a href="diary.html">
+            <figure class="effect-color3">
+              <img class="diary-image" src="./src/img/diary_img/Peru.jpg">
+            </figure>
+            <p class="diary-title">Peru</p>
+            <time class="diary-date" datetime="2020-03-07">2020.03.07 ~ 03.08</time>
+          </a>
+        </div>
+        <div class="diary-box">
+          <a href="diary.html">
+            <figure class="effect-color3">
+              <img class="diary-image" src="./src/img/diary_img/Nouvelle-Caledonie.jpg">
+            </figure>
+            <p class="diary-title">Nouvelle-Caledonie</p>
+            <time class="diary-date" datetime="2020-03-07">2020.03.07 ~ 03.08</time>
+          </a>
+        </div>
+        <div class="diary-box">
+          <a href="diary.html">
+            <figure class="effect-color3">
+              <img class="diary-image" src="./src/img/diary_img/Philippines.jpg">
+            </figure>
+            <p class="diary-title">Philippines</p>
+            <time class="diary-date" datetime="2020-03-07">2020.03.07 ~ 03.08</time>
           </a>
         </div>
       </div>
-
         <!-- next-button -->
         <div class="diary-detail">
           <a class="btn btn-more" href="./diary.html">NEXT</a>
         </div>
-
     </section>
-  </main>
-  <!-- scroll -->
+  <!-- scroll button-->
     <button class="back-to-top">
       <span class="scroll-button">BackToTop</span>
     </button>
-<!-- FOOTER -->
+  </main>
+
+  <!-- share area-->
+  <section class="share">
+    <div class="share-wrapper">
+      <div class="share-button">
+        <a class="tw" href="#">
+          <i class="fab fa-twitter-square fa-5x"></i>
+        </a>
+      </div>
+      <div class="share-button">
+        <a class="in" href="#">
+          <i class="fab fa-instagram fa-5x"></i>
+        </a>
+      </div>
+      <div class="share-button">
+        <a class="fb" href="#">
+          <i class="fab fa-facebook fa-5x"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+<!-- footer_nav -->
+  <div class="footer_nav">
+    <nav class="footer_menu">
+      <li class="footer_item"><a href="./index.html">TOP</a></li>
+      <li class="footer_item"><a href="./about.html">ABOUT</a></li>
+      <li class="footer_item"><a href="./diary.html">DIARY</a></li>
+      <li class="footer_item"><a href="./contact.html">CONTACT</a></li>
+    </nav>
+  </div>
+<!-- footer -->
   <footer class="footer">
     <p>copyright © takenn. all rights reserved</p>
   </footer>
@@ -169,6 +248,7 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.BgSwitcher/0.4.3/jquery.bgswitcher.min.js"></script>
 <script src="./dist/js/bundle.js"></script>
+<!-- <script src="./src/app.js"></script> -->
 
 </body>
 </html>

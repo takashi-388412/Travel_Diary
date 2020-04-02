@@ -1,0 +1,17 @@
+/* ==================================
+* footer
+*=================================== */
+.footer {
+  text-align: center;
+  background-color: lightgray;
+  height: 80px;
+  background-color: gray;
+  p {
+    margin: 0;
+    line-height: 80px;
+    font-size: 1.0em;
+    @include mq() {
+    font-size: 10px;
+    }
+  }
+}

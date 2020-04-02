@@ -1,0 +1,24 @@
+/* ==================================
+* header
+*=================================== */
+.header {
+  height: 150px;
+  @include tb() {
+    height: 80px;
+  }
+}
+// site_logo
+.logo {
+  padding: 40px 0 20px;
+  display: inline-block;
+  @include tb() {
+    padding: 20px 0 ;
+  }
+}
+.logo a{
+  color: #000;
+  font-size: 2em;
+}
+.logo a:hover{
+  opacity: 0.5; 
+}

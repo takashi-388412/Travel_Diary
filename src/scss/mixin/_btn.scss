@@ -34,20 +34,54 @@
   }
 }
 .scroll {
-
   &-button {
     display: block;
     height: 18px;
     margin:auto;
     overflow: hidden;
     width: 26px;
-
       &::before{
-        content: url("../../dist/img/sprites.png");
+        content: url("../../src/img/sprites.png");
         display: inline-block;
         font-size: 0;
         line-height: 0;
         margin-left: -40px;
     }
+  }
+}
+//share button
+// .share_icon::before{
+//   font-family: "Font Awesome 5 Free";
+//   content: "\f14d";
+//   font-weight: 900;
+//   font-size: 18px;
+//   color:#4169E1;
+//   padding-right: 5px;
+// }
+// .share_button > a {
+//   display: inline-block;
+// }
+.share{
+
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  &-button {
+    padding: 30px;
+  }
+  .fa {
+    &-twitter-square {
+     color: #00BFFF;
+    }
+    &-instagram {
+     color: #FF69B4;
+    }
+    &-facebook {
+     color: #1E90FF;
+    }
+  }
+  .fab:hover {
+    opacity: 0.5;
   }
 }

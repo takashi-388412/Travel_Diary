@@ -2,358 +2,141 @@
 *  reset用
 * -------------------------------- */
 
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-/* Document
-   ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-
-html { /* 1 */
-	-webkit-text-size-adjust: 100%;
-	line-height: 1.15; /* 2 */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
 }
 
-/* Sections
-   ========================================================================== */
+/* HTML5 display-role reset for older browsers */
 
-/**
- * Remove the margin in all browsers.
- */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
 
 body {
-	margin: 0;
+	line-height: 1;
 }
 
-/**
- * Render the `main` element consistently in IE.
- */
-
-main {
-	display: block;
+ol,
+ul {
+	list-style: none;
 }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-
-h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
+blockquote,
+q {
+	quotes: none;
 }
 
-/* Grouping content
-   ========================================================================== */
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-
-hr {
-	-webkit-box-sizing: content-box;
-	box-sizing: content-box; /* 1 */
-	height: 0; /* 1 */
-	overflow: visible; /* 2 */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-pre {
-	font-family: monospace, monospace; /* 1 */
-	font-size: 1em; /* 2 */
-}
-
-/* Text-level semantics
-   ========================================================================== */
-
-/**
- * Remove the gray background on active links in IE 10.
- */
-
-a {
-	background-color: transparent;
-}
-
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-
-abbr[title] {
-	border-bottom: none; /* 1 */
-	text-decoration: underline; /* 2 */
-	-webkit-text-decoration: underline dotted;
-	text-decoration: underline dotted; /* 2 */
-}
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-
-b,
-strong {
-	font-weight: bolder;
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-code,
-kbd,
-samp {
-	font-family: monospace, monospace; /* 1 */
-	font-size: 1em; /* 2 */
-}
-
-/**
- * Add the correct font size in all browsers.
- */
-
-small {
-	font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-
-sub,
-sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
-}
-
-sub {
-	bottom: -0.25em;
-}
-
-sup {
-	top: -0.5em;
-}
-
-/* Embedded content
-   ========================================================================== */
-
-/**
- * Remove the border on images inside links in IE 10.
- */
-
-img {
-	border-style: none;
-}
-
-/* Forms
-   ========================================================================== */
-
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-	font-family: inherit; /* 1 */
-	font-size: 100%; /* 1 */
-	line-height: 1.15; /* 1 */
-	margin: 0; /* 2 */
-}
-
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-
-button,
-input { /* 1 */
-	overflow: visible;
-}
-
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-
-button,
-select { /* 1 */
-	text-transform: none;
-}
-
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-	-webkit-appearance: button;
-}
-
-/**
- * Remove the inner border and padding in Firefox.
- */
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-	border-style: none;
-	padding: 0;
-}
-
-/**
- * Restore the focus styles unset by the previous rule.
- */
-
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-	outline: 1px dotted ButtonText;
-}
-
-/**
- * Correct the padding in Firefox.
- */
-
-fieldset {
-	padding: 0.35em 0.75em 0.625em;
-}
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
-
-legend {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box; /* 1 */
-	color: inherit; /* 2 */
-	display: table; /* 1 */
-	max-width: 100%; /* 1 */
-	padding: 0; /* 3 */
-	white-space: normal; /* 1 */
-}
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-
-progress {
-	vertical-align: baseline;
-}
-
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-
-textarea {
-	overflow: auto;
-}
-
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-
-[type="checkbox"],
-[type="radio"] {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box; /* 1 */
-	padding: 0; /* 2 */
-}
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-	height: auto;
-}
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-
-[type="search"] {
-	-webkit-appearance: textfield; /* 1 */
-	outline-offset: -2px; /* 2 */
-}
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-
-[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
-}
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-
-::-webkit-file-upload-button {
-	-webkit-appearance: button; /* 1 */
-	font: inherit; /* 2 */
-}
-
-/* Interactive
-   ========================================================================== */
-
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-
-details {
-	display: block;
-}
-
-/*
- * Add the correct display in all browsers.
- */
-
-summary {
-	display: list-item;
-}
-
-/* Misc
-   ========================================================================== */
-
-/**
- * Add the correct display in IE 10+.
- */
-
-template {
-	display: none;
-}
-
-/**
- * Add the correct display in IE 10.
- */
-
-[hidden] {
-	display: none;
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /* --------------------------------
@@ -407,11 +190,40 @@ template {
 }
 
 .scroll-button::before {
-	content: url("../../dist/img/sprites.png");
+	content: url("../../src/img/sprites.png");
 	display: inline-block;
 	font-size: 0;
 	line-height: 0;
 	margin-left: -40px;
+}
+
+.share-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.share-button {
+	padding: 30px;
+}
+
+.share .fa-twitter-square {
+	color: #00BFFF;
+}
+
+.share .fa-instagram {
+	color: #FF69B4;
+}
+
+.share .fa-facebook {
+	color: #1E90FF;
+}
+
+.share .fab:hover {
+	opacity: 0.5;
 }
 
 .heading {
@@ -487,186 +299,248 @@ a:visited {
 *  module・・・使い回しできるモジュール的なCSSを格納
 * -------------------------------- */
 
-/* --------------------------------
-*  page・・・ページごとに必要なCSSを格納
-* -------------------------------- */
-
 /* ==================================
-* main
+* footer_nav
 *=================================== */
 
-.header {
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
+.footer_nav {
+	background-color: #dcdcdc;
+	padding: 30px 0;
+}
+
+.footer_menu {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.footer_item {
+	list-style-type: none;
+	padding: 0 30px;
+}
+
+.footer_item a {
+	color: #000;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.footer_item a:hover {
+	color: #fff;
+}
+
+/* ==================================
+* footer
+*=================================== */
+
+.footer {
+	background-color: lightgray;
+	background-color: gray;
 	height: 80px;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-	left: 0;
-	padding: 60px 100px;
-	position: absolute; /*logo と nav を横並びに*/
-	top: 0;
+	text-align: center;
+}
+
+.footer p {
+	font-size: 1.0em;
+	line-height: 80px;
+	margin: 0;
+}
+
+/* ==================================
+* global_nav
+*=================================== */
+
+#global-nav {
 	width: 100%;
+}
+
+#global-nav.m_fixed {
+	background-color: rgba(255, 255, 100, 0.7);
+	left: 0;
+	position: fixed;
+	top: 0;
 	z-index: 1;
 }
 
-.sticky-header {
-	background-color: rgba(0, 0, 0, 0.6);
-	height: 50px;
-	margin-left: -100px;
-	position: fixed;
-	-webkit-transition: 0.25s;
-	transition: 0.25s;
-	width: 100%;
-	z-index: 100;
+#global-nav .global-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
 }
 
-.sticky-item {
-	display: inline-block;
-	margin: 0 20px;
+#global-nav .global-item a {
+	color: #000;
+	display: block;
+	font-size: 1.2em;
+	line-height: 50px;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
 }
 
-.sticky-item a {
-	color: #fff;
-}
-
-.sticky-item a:hover {
+#global-nav .global-item a:hover {
+	border-bottom: 2px dotted #000;
 	opacity: 0.5;
 }
 
+#nav { /*アイコンのスペース*/ /*閉じる用の薄黒カバー*/ /*中身*/
+}
+
+#nav-drawer {
+	left: 10px;
+	position: fixed;
+	top: 25px;
+	z-index: 100;
+}
+
+#nav-open {
+	display: inline-block;
+	height: 22px;
+	vertical-align: middle;
+	width: 30px;
+}
+
+#nav-close {
+	background: black;
+	display: none;
+	height: 100%; /*全体に広がるように*/
+	left: 0;
+	opacity: 0; /*はじめは隠しておく*/
+	position: fixed;
+	top: 0;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	width: 100%;
+}
+
+#nav-content { /*滑らかに表示*/
+	-webkit-transform: translateX(-105%);
+	background: #fff; /*左に隠しておく*/
+	display: table; /*最大幅（調整してください）*/
+	height: 100%;
+	left: 0; /*右側に隙間を作る（閉じるカバーを表示）*/
+	max-width: 220px;
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	-ms-transform: translateX(-105%);
+	transform: translateX(-105%); /*背景色*/
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	width: 90%;
+}
+
+#nav-content .nav-list {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#nav-content .nav-item a {
+	color: #000;
+	display: block;
+	line-height: 50px;
+}
+
+#nav-content .nav-item a:hover {
+	opacity: 0.5;
+}
+
+/*チェックボックス等は非表示に*/
+
+.nav-unshown {
+	display: none;
+}
+
+/*ハンバーガーアイコンをCSSだけで表現*/
+
+#nav-open span,
+#nav-open span:before,
+#nav-open span:after {
+	background: #555; /*長さ*/
+	border-radius: 3px;
+	content: '';
+	cursor: pointer;
+	display: block;
+	height: 3px;
+	position: absolute; /*線の太さ*/
+	width: 25px;
+}
+
+#nav-open span:before {
+	bottom: -8px;
+}
+
+#nav-open span:after {
+	bottom: -16px;
+}
+
+/*チェックが入ったらもろもろ表示*/
+
+#nav-input:checked ~ #nav-close {
+	display: block; /*カバーを表示*/
+	opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+	-webkit-transform: translateX(0%); /*中身を表示（右へスライド）*/
+	-webkit-box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+	box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+	-ms-transform: translateX(0%);
+	transform: translateX(0%);
+}
+
+/* ==================================
+* header
+*=================================== */
+
+.header {
+	height: 150px;
+}
+
+.logo {
+	display: inline-block;
+	padding: 40px 0 20px;
+}
+
 .logo a {
-	color: #fff;
+	color: #000;
+	font-size: 2em;
 }
 
 .logo a:hover {
 	opacity: 0.5;
 }
 
-.nav-item {
-	display: inline-block; /*nav-itemを横並びに*/
-	padding: 0 15px;
-}
+/* ==================================
+* share_area
+*=================================== */
 
-.nav-item a {
-	color: #fff;
-	-webkit-transition-duration: 250ms;
-	transition-duration: 250ms;
-}
+/* --------------------------------
+*  page・・・ページごとに必要なCSSを格納
+* -------------------------------- */
 
-.nav-item a:hover {
-	border-bottom: 2px solid #fff;
-	padding-bottom: 10px;
-}
-
-#modal-overlay {
-	background-color: rgba(0, 0, 0, 0.6);
-	display: none;
-	height: 120%;
-	left: 0;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 99;
-}
-
-.icon-wrapper {
-	text-align: right;
-}
-
-.icon-hamburger {
-	border: 1px solid #ccc;
-	cursor: pointer;
-	display: none;
-	height: 50px;
-	margin: 10px 10px 0px;
-	margin-bottom: 0.4em;
-	position: relative;
-	width: 50px;
-}
-
-.icon-hamburger span {
-	background: #cccccc;
-	display: block;
-	height: 16%;
-	left: 50%;
-	margin: -8% 0 0 -42%;
-	position: absolute;
-	top: 50%;
-	width: 84%;
-}
-
-.icon-hamburger span::before,
-.icon-hamburger span::after {
-	background: #cccccc;
-	content: "";
-	display: block;
-	height: 100%;
-	left: 50%;
-	margin: -8% 0 0 -50%;
-	position: absolute;
-	right: 0;
-	top: 50%;
-	width: 100%;
-}
-
-.icon-hamburger span::before {
-	margin-top: -38%;
-}
-
-.icon-hamburger span::after {
-	margin-top: 19%;
-}
+/* ==================================
+* index
+*=================================== */
 
 .bg-switcher {
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
 	background-position: center center;
 	background-size: cover;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	height: 600px;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
+	height: 90vh;
 	width: 100%;
-}
-
-.bg {
-	color: white;
-	font-size: 100px;
-	font-weight: bold;
-	text-align: center;
-}
-
-.about {
-	background-color: #F6F6F6;
-}
-
-.about-wrapper {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: reverse;
-	-ms-flex-direction: row-reverse;
-	flex-direction: row-reverse;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
 }
 
 .about-text {
-	letter-spacing: 5px;
-	text-align: initial;
-	-webkit-writing-mode: vertical-rl;
-	-ms-writing-mode: tb-rl;
-	writing-mode: vertical-rl;
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+
+.diary {
+	background-color: #F6F6F6;
 }
 
 .diary-wrapper {
@@ -685,7 +559,6 @@ a:visited {
 .diary-box {
 	height: auto;
 	margin-bottom: 10px;
-	position: relative;
 	width: 22%;
 }
 
@@ -693,25 +566,33 @@ a:visited {
 	display: block;
 }
 
-.diary-box a:hover {
-	opacity: 0.8;
+.diary .effect-color1 {
+	background-color: #FAACA8;
+	background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+}
+
+.diary .effect-color2 {
+	background-color: #08AEEA;
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#08AEEA), to(#2AF598));
+	background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+}
+
+.diary .effect-color3 {
+	background-color: #FFFFFF;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), color-stop(50%, #6284FF), to(#FF0000));
+	background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
 }
 
 .diary-image {
-	display: block;
-	height: auto;
+	-webkit-transition: .3s ease-in-out;
+	height: 275px;
+	opacity: 1;
+	transition: .3s ease-in-out;
 	width: 100%;
 }
 
-.diary-country {
-	color: salmon;
-	font-size: 2.0rem;
-	left: 50%;
-	position: absolute;
-	top: 38%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+.diary-image:hover {
+	opacity: .5;
 }
 
 .diary-title {
@@ -766,6 +647,7 @@ a:visited {
 	cursor: pointer;
 	display: block;
 	margin: 0 auto;
+	margin-top: 10px;
 	outline: none;
 	padding: 16px;
 }
@@ -782,24 +664,12 @@ a:visited {
 	display: none;
 }
 
-.footer {
-	background-color: lightgray;
-	background-color: gray;
-	height: 80px;
-	line-height: 80px;
-	text-align: center;
-}
-
-.footer p {
-	margin: 0;
-}
-
 /* ==================================
 * contact
 *=================================== */
 
 .top-contact {
-	background: url("../../dist/img/sky.jpg") center;
+	background: url("../../src/img/Japan.jpg") center;
 	background-size: cover;
 	height: 300px;
 	width: 100%;
@@ -814,7 +684,7 @@ a:visited {
 *=================================== */
 
 .top-about {
-	background: url("../../dist/img/sunset.jpg") center;
+	background: url("../../src/img/uyuni.jpg") center;
 	background-size: cover;
 	height: 300px;
 	width: 100%;
@@ -829,7 +699,7 @@ a:visited {
 }
 
 .about-image {
-	background: url("../../dist/img/take.png") no-repeat;
+	background: url("../../src/img/take.png") no-repeat;
 	background-size: cover;
 	height: 300px;
 	margin: 0 auto 50px;
@@ -841,10 +711,18 @@ a:visited {
 *=================================== */
 
 .top-diary {
-	background: url("../../dist/img/beach.jpg") center;
+	background: url("../../src/img/Venezia.jpg") center;
 	background-size: cover;
 	height: 300px;
 	width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+
+#nav-open {
+	display: none;
+}
+
 }
 
 @media screen and (max-width: 768px) {
@@ -853,71 +731,16 @@ a:visited {
 	padding: 0 50px 80px;
 }
 
-.header {
-	display: block;
-	padding: 0;
+#global-nav {
+	display: none;
 }
 
-.sticky-header {
-	display: none;
+.header {
+	height: 80px;
 }
 
 .logo {
-	display: none;
-}
-
-.nav {
-	-webkit-transform: translate(-50%, -50%);
-	background: #fff;
-	display: none;
-	height: auto;
-	left: 50%;
-	position: fixed;
-	top: 50%;
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	width: 80%;
-	z-index: 100;
-}
-
-.nav-menu {
-	padding: 0;
-}
-
-.nav-item {
-	display: block;
-	padding: 10px 0px;
-}
-
-.nav-item a {
-	border-bottom: 2px solid #000;
-	color: #000;
-	display: block;
-	padding: 10px 0px;
-	-webkit-transition-duration: initial;
-	transition-duration: initial;
-}
-
-.nav-item a:hover {
-	border-bottom: 2px solid #000;
-	padding-bottom: 0;
-}
-
-.icon-hamburger {
-	display: inline-block;
-}
-
-.about-wrapper {
-	display: block;
-	-webkit-writing-mode: horizontal-tb;
-	-ms-writing-mode: lr-tb;
-	writing-mode: horizontal-tb;
-}
-
-.about-text {
-	-webkit-writing-mode: horizontal-tb;
-	-ms-writing-mode: lr-tb;
-	writing-mode: horizontal-tb;
+	padding: 20px 0;
 }
 
 .diary-box {
@@ -929,11 +752,39 @@ a:visited {
 @media screen and (max-width: 414px) {
 
 .heading {
-	padding: 40px 0;
+	padding: 10px 0;
 }
 
 .container {
-	padding: 0 30px 80px;
+	padding: 0 30px 50px;
+}
+
+.footer_nav {
+	padding: 0;
+}
+
+.footer_menu {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.footer_item {
+	border: 1px solid black;
+	padding: 15px 0;
+}
+
+.footer_item a {
+	display: block;
+}
+
+.footer p {
+	font-size: 10px;
+}
+
+.about-text {
+	font-size: 1.0em;
 }
 
 .diary-wrapper {
@@ -950,12 +801,7 @@ a:visited {
 	width: 100%;
 }
 
-.footer {
-	font-size: 1.2rem;
-}
-
 .about-image {
-	height: 200px;
 	width: 100%;
 }
 

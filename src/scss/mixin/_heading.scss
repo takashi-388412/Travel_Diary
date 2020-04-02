@@ -10,7 +10,7 @@
   letter-spacing: 5px;
   border-bottom: 1px solid black;
   @include mq() {
-    padding: 40px 0;
+    padding: 10px 0;
   }
 }
 .heading::before,
