@@ -537,14 +537,33 @@ a:visited {
 	display: block;
 }
 
-.diary-box a:hover {
-	opacity: 0.8;
+.diary .effect-color1 {
+	background-color: #FAACA8;
+	background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+}
+
+.diary .effect-color2 {
+	background-color: #08AEEA;
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#08AEEA), to(#2AF598));
+	background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+}
+
+.diary .effect-color3 {
+	background-color: #FFFFFF;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), color-stop(50%, #6284FF), to(#FF0000));
+	background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
 }
 
 .diary-image {
-	display: block;
-	height: auto;
+	-webkit-transition: .3s ease-in-out;
+	height: 275px;
+	opacity: 1;
+	transition: .3s ease-in-out;
 	width: 100%;
+}
+
+.diary-image:hover {
+	opacity: .5;
 }
 
 .diary-title {
