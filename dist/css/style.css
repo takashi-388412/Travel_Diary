@@ -516,8 +516,27 @@ a:visited {
 }
 
 /* ==================================
-* share_area
+* loading
 *=================================== */
+
+.loading {
+	background: #fff;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 100;
+}
+
+.loading__img {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
 
 /* --------------------------------
 *  page・・・ページごとに必要なCSSを格納
