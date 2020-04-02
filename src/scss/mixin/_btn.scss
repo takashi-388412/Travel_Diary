@@ -62,13 +62,15 @@
 //   display: inline-block;
 // }
 .share{
-
   &-wrapper {
     display: flex;
     justify-content: center;
   }
   &-button {
     padding: 30px;
+    @include mq() {
+      font-size: 12px;
+    }
   }
   .fa {
     &-twitter-square {

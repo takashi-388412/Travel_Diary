@@ -526,7 +526,7 @@ a:visited {
 	position: fixed;
 	right: 0;
 	top: 0;
-	z-index: 100;
+	z-index: 9999;
 }
 
 .loading__img {
@@ -769,6 +769,10 @@ a:visited {
 }
 
 @media screen and (max-width: 414px) {
+
+.share-button {
+	font-size: 12px;
+}
 
 .heading {
 	padding: 10px 0;
