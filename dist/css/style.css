@@ -357,6 +357,119 @@ a:visited {
 	opacity: 0.5;
 }
 
+#nav-drawer {
+	left: 10px;
+	position: fixed;
+	top: 25px;
+}
+
+/*チェックボックス等は非表示に*/
+
+.nav-unshown {
+	display: none;
+}
+
+/*アイコンのスペース*/
+
+#nav-open {
+	display: inline-block;
+	height: 22px;
+	vertical-align: middle;
+	width: 30px;
+}
+
+/*ハンバーガーアイコンをCSSだけで表現*/
+
+#nav-open span,
+#nav-open span:before,
+#nav-open span:after {
+	background: #555; /*長さ*/
+	border-radius: 3px;
+	content: '';
+	cursor: pointer;
+	display: block;
+	height: 3px;
+	position: absolute; /*線の太さ*/
+	width: 25px;
+}
+
+#nav-open span:before {
+	bottom: -8px;
+}
+
+#nav-open span:after {
+	bottom: -16px;
+}
+
+/*閉じる用の薄黒カバー*/
+
+#nav-close {
+	background: black;
+	display: none;
+	height: 100%; /*全体に広がるように*/
+	left: 0;
+	opacity: 0; /*はじめは隠しておく*/
+	position: fixed;
+	top: 0;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	width: 100%;
+	z-index: 99;
+}
+
+/*中身*/
+
+#nav-content { /*滑らかに表示*/
+	-webkit-transform: translateX(-105%);
+	background: #fff; /*最大幅（調整してください）*/
+	height: 100%;
+	left: 0; /*右側に隙間を作る（閉じるカバーを表示）*/
+	max-width: 220px;
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	-ms-transform: translateX(-105%);
+	transform: translateX(-105%); /*背景色*/
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out; /*最前面に*/
+	width: 90%;
+	z-index: 9999; /*左に隠しておく*/
+}
+
+/*チェックが入ったらもろもろ表示*/
+
+#nav-input:checked ~ #nav-close {
+	display: block; /*カバーを表示*/
+	opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+	-webkit-transform: translateX(0%); /*中身を表示（右へスライド）*/
+	-webkit-box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+	box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+	-ms-transform: translateX(0%);
+	transform: translateX(0%);
+}
+
+#nav-content {
+	display: table;
+}
+
+#nav-content .nav-list {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#nav-content .nav-item a {
+	color: #000;
+	display: block;
+	line-height: 50px;
+}
+
+#nav-content .nav-item a:hover {
+	opacity: 0.5;
+}
+
 /* ==================================
 * header
 *=================================== */
@@ -366,6 +479,7 @@ a:visited {
 }
 
 .logo {
+	display: inline-block;
 	padding: 40px 0 20px;
 }
 
@@ -573,14 +687,30 @@ a:visited {
 	width: 100%;
 }
 
+@media screen and (min-width: 769px) {
+
+#nav-open {
+	display: none;
+}
+
+}
+
 @media screen and (max-width: 768px) {
 
 .container {
 	padding: 0 50px 80px;
 }
 
-.logo {
+#global-nav {
 	display: none;
+}
+
+.header {
+	height: 80px;
+}
+
+.logo {
+	padding: 20px 0;
 }
 
 .diary-box {

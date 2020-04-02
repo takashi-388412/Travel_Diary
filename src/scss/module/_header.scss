@@ -3,15 +3,16 @@
 *=================================== */
 .header {
   height: 150px;
-  @include tb {
-
+  @include tb() {
+    height: 80px;
   }
 }
 // site_logo
 .logo {
   padding: 40px 0 20px;
+  display: inline-block;
   @include tb() {
-    display: none;
+    padding: 20px 0 ;
   }
 }
 .logo a{

@@ -13,17 +13,28 @@
         easing: "swing", //エフェクトのイージング "swing" "linear"
     });
 });
-var navPos = jQuery( '#global-nav' ).offset().top; // グローバルメニューの位置
-var navHeight = jQuery( '#global-nav' ).outerHeight(); // グローバルメニューの高さ
-jQuery( window ).on( 'scroll', function() {
-  if ( jQuery( this ).scrollTop() > navPos ) {
-    jQuery( 'body' ).css( 'padding-top', navHeight );
-    jQuery( '#global-nav' ).addClass( 'm_fixed' );
-  } else {
-    jQuery( 'body' ).css( 'padding-top', 0 );
-    jQuery( '#global-nav' ).removeClass( 'm_fixed' );
-  }
+$(function () {
+    var windowWidth = window.innerWidth;
+    var navPos = jQuery('#global-nav').offset().top; // グローバルメニューの位置
+    var navHeight = jQuery('#global-nav').outerHeight(); // グローバルメニューの高さ
+    //画面幅:768px以上
+    if (768 <= windowWidth) {
+    jQuery(window).on('scroll', function () {
+        if (jQuery(this).scrollTop() > navPos) {
+            jQuery('body').css('padding-top', navHeight);
+            jQuery('#global-nav').addClass('m_fixed');
+        } else {
+            jQuery('body').css('padding-top', 0);
+            jQuery('#global-nav').removeClass('m_fixed');
+        }
+    });
+    //画面幅:768px以下
+    } else {
+        return false;
+    }
 });
+
+
 //  smooth scroll
 $(function () {
     $('.back-to-top').each(function () {
