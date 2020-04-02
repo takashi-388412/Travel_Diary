@@ -3,7 +3,8 @@
   jQuery(function($) {
     $('.bg-switcher').bgSwitcher({
         // images: ['../img/sea.jpg','../img/beach.jpg','../img/sunset.jpg','../img/sky.jpg'], // 切り替え画像
-        images: ['./dist/img/sea.jpg','./dist/img/beach.jpg','./dist/img/sunset.jpg','./dist/img/sky.jpg'], 
+        // images: ['./dist/img/sea.jpg','./dist/img/beach.jpg','./dist/img/sunset.jpg','./dist/img/sky.jpg'], 
+        images: ['./src/img/uyuni.jpg','./src/img/Japan.jpg','./src/img/Venezia.jpg','./src/img/night_view.jpg'], 
         Interval: 3000, //切り替えの間隔 1000=1秒
         start: true, //$.fn.bkkkgswitcher(config)をコールした時に切り替えを開始する
         loop: true, //切り替えをループする
