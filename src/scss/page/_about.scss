@@ -4,7 +4,7 @@
 .top {
 
   &-about{
-    background: url('../../dist/img/sunset.jpg') center;
+    background: url('../../src/img/uyuni.jpg') center;
     background-size: cover;
     width: 100%;
     height: 300px;
@@ -22,14 +22,13 @@
     }
   }
   &-image {
-    background: url("../../dist/img/take.png") no-repeat;
+    background: url("../../src/img/take.png") no-repeat;
     background-size: cover;
     width: 300px;
     height: 300px;
     margin: 0 auto 50px;
     @include mq() {
       width: 100%;
-    height: 200px;
     }
   }
 }

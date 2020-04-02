@@ -13,34 +13,38 @@
 <body>
 
 <header class="header" id="header">
+  <!-- site_logo -->
   <h1 class="logo">
-    <a href="./index.html">sample</a>
+    <a href="./index.html">Travel Diary</a>
   </h1>
-
-<div class="icon-wrapper">
-    <div class="icon-hamburger">
-      <span></span>
+  <!-- 768px 以上で表示されるエリア -->
+  <!-- global_nav -->
+  <nav id="global-nav">
+    <ul class="global-list">
+      <li class="global-item"><a href="./index.html">TOP</a></li>
+      <li class="global-item"><a href="./about.html">ABOUT</a></li>
+      <li class="global-item"><a href="./diary.html">DIARY</a></li>
+      <li class="global-item"><a href="./contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+  <!-- 768px 以下で表示されるエリア -->
+  <div id="nav-drawer">
+    <!-- checkbox onとoffと連動している-->
+    <input id="nav-input" type="checkbox" class="nav-unshown">
+    <!-- checkbox on-->
+    <label id="nav-open" for="nav-input"><span></span></label>
+    <!-- checkbox off-->
+    <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+    <!-- drawer-menu area -->
+    <div id="nav-content">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="./index.html">TOP</a></li>
+        <li class="nav-item"><a href="./about.html">ABOUT</a></li>
+        <li class="nav-item"><a href="./diary.html">DIARY</a></li>
+        <li class="nav-item"><a href="./contact.html">CONTACT</a></li>
+      </ul>
     </div>
 </div>
-  <nav class="nav">
-    <ul class="nav-menu">
-      <li class="nav-item"><a href="./index.html">TOP</a></li>
-      <li class="nav-item"><a href="./about.html">ABOUT</a></li>
-      <li class="nav-item"><a href="./diary.html">DIARY</a></li>
-      <li class="nav-item"><a href="./contact.html">CONTACT</a></li>
-    </ul>
-  </nav>
-  <!-- sticky header -->
-  <div class="sticky-header">
-  <nav class="sticky-nav">
-    <ul class="sticky-menu">
-      <li class="nav-item"><a href="./index.html">TOP</a></li>
-      <li class="nav-item"><a href="./about.html">ABOUT</a></li>
-      <li class="nav-item"><a href="./diary.html">DIARY</a></li>
-      <li class="nav-item"><a href="./contact.html">CONTACT</a></li>
-    </ul>
-  </nav>
-  </div>
 </header>
 
 <!-- main -->
@@ -60,22 +64,46 @@
           TAKEです。<br>
         </p>
         <p class="about-content">
-          Travel Journeyという世界中での記録を残す架空のブログサイトを作りました。<br>
+          Travel Journeyという架空のHPを作りました。<br>
         </p>
     </div>
-
-      <!-- portfolioリンク -->
-      <!-- <div class="">
-
-      </div> -->
     </section>
-
-  </main>
-  <!-- scroll -->
+  <!-- scroll button-->
     <button class="back-to-top">
       <span class="scroll-button">BackToTop</span>
     </button>
-<!-- FOOTER -->
+  </main>
+
+  <!-- share area-->
+  <section class="share">
+    <div class="share-wrapper">
+      <div class="share-button">
+        <a class="tw" href="#">
+          <i class="fab fa-twitter-square fa-5x"></i>
+        </a>
+      </div>
+      <div class="share-button">
+        <a class="in" href="#">
+          <i class="fab fa-instagram fa-5x"></i>
+        </a>
+      </div>
+      <div class="share-button">
+        <a class="fb" href="#">
+          <i class="fab fa-facebook fa-5x"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+<!-- footer_nav -->
+  <div class="footer_nav">
+    <nav class="footer_menu">
+      <li class="footer_item"><a href="./index.html">TOP</a></li>
+      <li class="footer_item"><a href="./about.html">ABOUT</a></li>
+      <li class="footer_item"><a href="./diary.html">DIARY</a></li>
+      <li class="footer_item"><a href="./contact.html">CONTACT</a></li>
+    </nav>
+  </div>
+<!-- footer -->
   <footer class="footer">
     <p>copyright © takenn. all rights reserved</p>
   </footer>
@@ -88,5 +116,7 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.BgSwitcher/0.4.3/jquery.bgswitcher.min.js"></script>
 <script src="./dist/js/bundle.js"></script>
+<!-- <script src="./src/app.js"></script> -->
+
 </body>
 </html>

@@ -669,7 +669,7 @@ a:visited {
 *=================================== */
 
 .top-contact {
-	background: url("../../dist/img/sky.jpg") center;
+	background: url("../../src/img/Japan.jpg") center;
 	background-size: cover;
 	height: 300px;
 	width: 100%;
@@ -684,7 +684,7 @@ a:visited {
 *=================================== */
 
 .top-about {
-	background: url("../../dist/img/sunset.jpg") center;
+	background: url("../../src/img/uyuni.jpg") center;
 	background-size: cover;
 	height: 300px;
 	width: 100%;
@@ -699,7 +699,7 @@ a:visited {
 }
 
 .about-image {
-	background: url("../../dist/img/take.png") no-repeat;
+	background: url("../../src/img/take.png") no-repeat;
 	background-size: cover;
 	height: 300px;
 	margin: 0 auto 50px;
@@ -711,7 +711,7 @@ a:visited {
 *=================================== */
 
 .top-diary {
-	background: url("../../dist/img/beach.jpg") center;
+	background: url("../../src/img/Venezia.jpg") center;
 	background-size: cover;
 	height: 300px;
 	width: 100%;
@@ -802,7 +802,6 @@ a:visited {
 }
 
 .about-image {
-	height: 200px;
 	width: 100%;
 }
 
