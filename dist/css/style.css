@@ -197,6 +197,35 @@ table {
 	margin-left: -40px;
 }
 
+.share-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.share-button {
+	padding: 30px;
+}
+
+.share .fa-twitter-square {
+	color: #00BFFF;
+}
+
+.share .fa-instagram {
+	color: #FF69B4;
+}
+
+.share .fa-facebook {
+	color: #1E90FF;
+}
+
+.share .fab:hover {
+	opacity: 0.5;
+}
+
 .heading {
 	border-bottom: 1px solid black;
 	display: inline-block;
@@ -505,13 +534,13 @@ a:visited {
 	width: 100%;
 }
 
-.about {
-	background-color: #F6F6F6;
-}
-
 .about-text {
 	font-size: 1.5em;
 	line-height: 1.5em;
+}
+
+.diary {
+	background-color: #F6F6F6;
 }
 
 .diary-wrapper {
@@ -618,7 +647,7 @@ a:visited {
 	cursor: pointer;
 	display: block;
 	margin: 0 auto;
-	margin-bottom: 50px;
+	margin-top: 10px;
 	outline: none;
 	padding: 16px;
 }

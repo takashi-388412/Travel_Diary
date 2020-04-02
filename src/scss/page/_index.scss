@@ -15,7 +15,6 @@
 // ==================================
 .about {
     // padding: 0 150px 80px;
-    background-color: #F6F6F6;
 
   // &-wrapper {
   //   display: flex;
@@ -45,6 +44,7 @@
 // ==================================
 .diary {
     // padding: 0 150px 80px;
+    background-color: #F6F6F6;
 
   &-wrapper {
     width: 100%;
@@ -183,7 +183,7 @@
     margin: 0 auto;
     border-radius: 50%;
     outline: none;
-    margin-bottom: 50px;
+    margin-top: 10px;
 }
 .back-to-top:hover {
     box-shadow: 5px 5px 5px rgba(0,0,0,0.20);
