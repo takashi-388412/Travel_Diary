@@ -35,7 +35,6 @@ $(function () {
     }
 });
 
-
 //  smooth scroll
 $(function () {
     $('.back-to-top').each(function () {

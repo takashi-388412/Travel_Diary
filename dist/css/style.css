@@ -190,7 +190,7 @@ table {
 }
 
 .scroll-button::before {
-	content: url("../../dist/img/sprites.png");
+	content: url("../../src/img/sprites.png");
 	display: inline-block;
 	font-size: 0;
 	line-height: 0;
@@ -530,7 +530,6 @@ a:visited {
 .diary-box {
 	height: auto;
 	margin-bottom: 10px;
-	position: relative;
 	width: 22%;
 }
 
@@ -546,17 +545,6 @@ a:visited {
 	display: block;
 	height: auto;
 	width: 100%;
-}
-
-.diary-country {
-	color: salmon;
-	font-size: 2.0rem;
-	left: 50%;
-	position: absolute;
-	top: 38%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
 }
 
 .diary-title {

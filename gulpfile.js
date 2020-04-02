@@ -7,7 +7,7 @@ const packageImporter = require('node-sass-package-importer'); // scssファイ�
 const sassGlob = require( 'gulp-sass-glob' ); //sassをパーシャル化
 const plumber = require( 'gulp-plumber' ); //error時に止めずに実行し続ける
 const notify = require( 'gulp-notify' ); //error通知を出す
-// const sourcemaps = require('gulp-sourcemaps'); //コンパイル前のソースコードを確認できるようにするためのコンパイル前後の関係を表したもの
+const sourcemaps = require('gulp-sourcemaps'); //コンパイル前のソースコードを確認できるようにするためのコンパイル前後の関係を表したもの
 const cleanCSS = require('gulp-clean-css'); //cssファイル圧縮
 const rename = require('gulp-rename'); //ファイル名リネーム(圧縮した css のファイル名に.minを追加)
 const imagemin = require("gulp-imagemin"); //画像圧縮
@@ -46,7 +46,6 @@ const paths = {
 // sassコンパイタスク
 gulp.task('sass', done => {
   gulp.src(paths.src.scss)
-    // .pipe(plumber({ errorHandler: notify.onError('Error: &lt;%= error.message %&gt;') }))//watch中にエラーが起きても止まらない
     // .pipe(sourcemaps.init()) //順番大切
     .pipe(sassGlob()) //importの読み込みを簡潔にする
     .pipe(sass({
@@ -90,7 +89,7 @@ gulp.task("imagemin", () =>
 
 //ファイル変更時に行うタスク
 gulp.task('watch', function (done) {
-  gulp.watch('./*.html', gulp.task('bs-reload'));
+  gulp.watch('./**/*.html', gulp.task('bs-reload'));
   gulp.watch('./src/**/*.scss', gulp.task('sass'));
   gulp.watch('./src/**/*.scss', gulp.task('bs-reload')); //bundle後に画面更新
   gulp.watch('./src/**/*.js', gulp.task('bundle.js'));
