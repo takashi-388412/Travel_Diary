@@ -2,9 +2,7 @@
 // bg.swircher.js を導入
   jQuery(function($) {
     $('.bg-switcher').bgSwitcher({
-        // images: ['../img/sea.jpg','../img/beach.jpg','../img/sunset.jpg','../img/sky.jpg'], // 切り替え画像
-        // images: ['./dist/img/sea.jpg','./dist/img/beach.jpg','./dist/img/sunset.jpg','./dist/img/sky.jpg'], 
-        images: ['./src/img/uyuni.jpg','./src/img/Japan.jpg','./src/img/Venezia.jpg','./src/img/night_view.jpg'], 
+        images: ['./dist/img/uyuni.jpg','./dist/img/Japan.jpg','./dist/img/Venezia.jpg','./dist/img/night_view.jpg'], 
         Interval: 3000, //切り替えの間隔 1000=1秒
         start: true, //$.fn.bkkkgswitcher(config)をコールした時に切り替えを開始する
         loop: true, //切り替えをループする
@@ -66,4 +64,12 @@ $(function () {
         }
         return [];
     }
-}); 
+});
+//loading-page
+$(function(){
+　var loading = $("#loading");　//loading-areaを取得
+　var isHidden = function(){　//loading-area hide
+　　loading.fadeOut(1000); //1000ミリ秒かけてフェードアウト
+　};
+　setTimeout(isHidden,3500);　//1000ミリ秒後にloadingFunc開始
+});
