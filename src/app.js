@@ -71,5 +71,5 @@ $(function(){
 　var isHidden = function(){　//loading-area hide
 　　loading.fadeOut(1000); //1000ミリ秒かけてフェードアウト
 　};
-　setTimeout(isHidden,3500);　//1000ミリ秒後にloadingFunc開始
+　setTimeout(isHidden,3000);　//1000ミリ秒後にloadingFunc開始
 });
